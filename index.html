@@ -1,986 +1,309 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Yukai Song | Ph.D. Candidate</title>
-    <meta name="description" content="Yukai Song - Ph.D. Candidate at University of Pittsburgh specializing in reliability-aware ML and EEG-based modeling.">
+    <title>Yukai Song | Software Engineer & Ph.D. Candidate</title>
+    
+    <!-- Tailwind CSS via CDN for rapid styling without build tools -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts: Inter for a clean, modern, tech-focused typography -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;1,400&family=Nunito+Sans:wght@300;400;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
-    <style>
-        :root {
-            --bg: #ffffff;
-            --bg-alt: #f8f9fb;
-            --bg-card: #ffffff;
-            --text: #2d3748;
-            --text-secondary: #5a6577;
-            --text-muted: #8892a4;
-            --heading: #1a202c;
-            --accent: #1565c0;
-            --accent-light: #e3f2fd;
-            --accent-hover: #0d47a1;
-            --teal: #00897b;
-            --teal-light: #e0f2f1;
-            --orange: #ef6c00;
-            --orange-light: #fff3e0;
-            --purple: #7b1fa2;
-            --purple-light: #f3e5f5;
-            --border: #e2e8f0;
-            --shadow-sm: 0 1px 3px rgba(0,0,0,0.06);
-            --shadow-md: 0 4px 12px rgba(0,0,0,0.08);
-            --shadow-lg: 0 8px 30px rgba(0,0,0,0.1);
-            --radius: 8px;
-            --font-body: 'Nunito Sans', -apple-system, BlinkMacSystemFont, sans-serif;
-            --font-serif: 'Lora', Georgia, serif;
-            --font-mono: 'JetBrains Mono', monospace;
-            --max-width: 920px;
-        }
-
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        html { scroll-behavior: smooth; }
-
-        body {
-            font-family: var(--font-body);
-            background: var(--bg);
-            color: var(--text);
-            line-height: 1.7;
-            -webkit-font-smoothing: antialiased;
-        }
-
-        /* ===== NAV ===== */
-        nav {
-            position: fixed;
-            top: 0; left: 0; right: 0;
-            z-index: 100;
-            background: rgba(255,255,255,0.92);
-            backdrop-filter: blur(12px);
-            border-bottom: 1px solid var(--border);
-            height: 56px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-
-        .nav-inner {
-            width: 100%;
-            max-width: var(--max-width);
-            padding: 0 1.5rem;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-        }
-
-        .nav-logo {
-            font-weight: 800;
-            font-size: 1.05rem;
-            color: var(--heading);
-            text-decoration: none;
-            letter-spacing: -0.01em;
-        }
-
-        .nav-links {
-            display: flex;
-            gap: 1.8rem;
-            list-style: none;
-        }
-
-        .nav-links a {
-            font-size: 0.85rem;
-            font-weight: 600;
-            color: var(--text-secondary);
-            text-decoration: none;
-            transition: color 0.2s;
-        }
-        .nav-links a:hover { color: var(--accent); }
-
-        .nav-hamburger {
-            display: none;
-            background: none;
-            border: none;
-            cursor: pointer;
-            padding: 4px;
-        }
-        .nav-hamburger span {
-            display: block;
-            width: 20px;
-            height: 2px;
-            background: var(--text);
-            margin: 4px 0;
-            transition: 0.3s;
-        }
-
-        /* ===== BANNER + PROFILE ===== */
-        .banner {
-            width: 100%;
-            height: 280px;
-            margin-top: 56px;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            position: relative;
-            overflow: hidden;
-        }
-
-        .banner::after {
-            content: '';
-            position: absolute;
-            inset: 0;
-            background:
-                radial-gradient(ellipse at 20% 80%, rgba(255,255,255,0.15) 0%, transparent 50%),
-                radial-gradient(ellipse at 80% 20%, rgba(255,255,255,0.1) 0%, transparent 50%);
-        }
-
-        .profile-section {
-            text-align: center;
-            margin-top: -70px;
-            position: relative;
-            z-index: 2;
-            padding: 0 1.5rem;
-        }
-
-        .avatar-initials {
-            width: 140px;
-            height: 140px;
-            border-radius: 50%;
-            border: 5px solid var(--bg);
-            box-shadow: var(--shadow-lg);
-            background: linear-gradient(135deg, #667eea, #764ba2);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin: 0 auto;
-            font-size: 2.8rem;
-            font-weight: 800;
-            color: #fff;
-            letter-spacing: -0.02em;
-            overflow: hidden;
-        }
-
-        .avatar-initials img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
-
-        .profile-name {
-            font-size: 1.85rem;
-            font-weight: 800;
-            color: var(--heading);
-            margin-top: 1rem;
-            letter-spacing: -0.02em;
-        }
-
-        .profile-title {
-            font-size: 1.05rem;
-            color: var(--text-secondary);
-            font-weight: 400;
-            margin-top: 0.2rem;
-        }
-
-        .profile-org {
-            font-size: 0.92rem;
-            color: var(--text-muted);
-            margin-top: 0.1rem;
-        }
-
-        /* Social icons */
-        .social-icons {
-            display: flex;
-            justify-content: center;
-            gap: 0.6rem;
-            margin-top: 1rem;
-        }
-
-        .social-icon {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            width: 38px;
-            height: 38px;
-            border-radius: 50%;
-            color: var(--text-secondary);
-            transition: all 0.2s;
-            text-decoration: none;
-        }
-        .social-icon:hover {
-            color: var(--accent);
-            background: var(--accent-light);
-        }
-        .social-icon svg {
-            width: 20px;
-            height: 20px;
-            fill: currentColor;
-        }
-
-        /* Bio */
-        .bio {
-            max-width: 640px;
-            margin: 1.5rem auto 0;
-            font-family: var(--font-serif);
-            font-size: 1rem;
-            color: var(--text);
-            line-height: 1.8;
-            text-align: center;
-        }
-
-        /* Download button */
-        .download-btn {
-            display: inline-flex;
-            align-items: center;
-            gap: 0.5rem;
-            margin-top: 1.2rem;
-            padding: 0.6rem 1.4rem;
-            font-family: var(--font-body);
-            font-size: 0.85rem;
-            font-weight: 600;
-            color: var(--text-secondary);
-            border: 2px solid var(--border);
-            border-radius: 6px;
-            text-decoration: none;
-            background: var(--bg);
-            transition: all 0.2s;
-        }
-        .download-btn:hover {
-            border-color: var(--accent);
-            color: var(--accent);
-            box-shadow: var(--shadow-sm);
-        }
-        .download-btn svg {
-            width: 16px;
-            height: 16px;
-            stroke: currentColor;
-            fill: none;
-        }
-
-        /* ===== CONTENT AREA ===== */
-        .content {
-            max-width: var(--max-width);
-            margin: 0 auto;
-            padding: 3rem 1.5rem;
-        }
-
-        /* ===== SECTION HEADER ===== */
-        .section {
-            margin-bottom: 3.5rem;
-        }
-
-        .section-title {
-            font-size: 1.5rem;
-            font-weight: 800;
-            color: var(--heading);
-            margin-bottom: 1.5rem;
-            letter-spacing: -0.01em;
-        }
-
-        .section-title::after {
-            content: '';
-            display: block;
-            width: 40px;
-            height: 3px;
-            background: var(--accent);
-            margin-top: 0.5rem;
-            border-radius: 2px;
-        }
-
-        /* ===== TWO-COLUMN LAYOUT ===== */
-        .two-col {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 2.5rem;
-        }
-
-        /* ===== EXPERIENCE / EDUCATION ITEMS ===== */
-        .entry {
-            display: flex;
-            gap: 1rem;
-            margin-bottom: 2rem;
-        }
-
-        .entry:last-child { margin-bottom: 0; }
-
-        .entry-icon {
-            flex-shrink: 0;
-            width: 40px;
-            height: 40px;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin-top: 0.15rem;
-        }
-
-        .entry-icon--blue { background: var(--accent-light); color: var(--accent); }
-        .entry-icon--teal { background: var(--teal-light); color: var(--teal); }
-        .entry-icon--purple { background: var(--purple-light); color: var(--purple); }
-
-        .entry-icon svg { width: 18px; height: 18px; fill: currentColor; }
-
-        .entry-title {
-            font-size: 1rem;
-            font-weight: 700;
-            color: var(--heading);
-            line-height: 1.4;
-        }
-
-        .entry-org {
-            font-size: 0.88rem;
-            color: var(--text-secondary);
-        }
-
-        .entry-date {
-            font-size: 0.8rem;
-            color: var(--text-muted);
-            margin-top: 0.1rem;
-        }
-
-        .entry-desc {
-            font-size: 0.88rem;
-            color: var(--text-secondary);
-            margin-top: 0.3rem;
-            line-height: 1.6;
-        }
-
-        /* ===== RESEARCH CARDS ===== */
-        .research-list {
-            display: flex;
-            flex-direction: column;
-            gap: 1.2rem;
-        }
-
-        .research-card {
-            background: var(--bg-card);
-            border: 1px solid var(--border);
-            border-radius: var(--radius);
-            padding: 1.5rem 1.8rem;
-            transition: all 0.25s;
-        }
-
-        .research-card:hover {
-            box-shadow: var(--shadow-md);
-            border-color: #cdd5e0;
-            transform: translateY(-1px);
-        }
-
-        .research-card-top {
-            display: flex;
-            justify-content: space-between;
-            align-items: flex-start;
-            gap: 1rem;
-        }
-
-        .research-card h3 {
-            font-size: 1.02rem;
-            font-weight: 700;
-            color: var(--heading);
-            line-height: 1.45;
-        }
-
-        .research-card .date {
-            font-size: 0.75rem;
-            color: var(--text-muted);
-            white-space: nowrap;
-            font-family: var(--font-mono);
-            padding-top: 0.25rem;
-        }
-
-        .research-points {
-            margin-top: 0.8rem;
-            display: flex;
-            flex-direction: column;
-            gap: 0.45rem;
-        }
-
-        .research-point {
-            font-size: 0.87rem;
-            color: var(--text-secondary);
-            padding-left: 1.2rem;
-            position: relative;
-            line-height: 1.6;
-        }
-
-        .research-point::before {
-            content: '›';
-            position: absolute;
-            left: 0;
-            color: var(--accent);
-            font-weight: 700;
-            font-size: 1.1rem;
-            line-height: 1.4;
-        }
-
-        .research-tags {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 0.4rem;
-            margin-top: 0.9rem;
-        }
-
-        .tag {
-            font-size: 0.7rem;
-            font-weight: 600;
-            padding: 0.25rem 0.65rem;
-            border-radius: 4px;
-            letter-spacing: 0.02em;
-        }
-
-        .tag--blue { background: var(--accent-light); color: var(--accent); }
-        .tag--teal { background: var(--teal-light); color: var(--teal); }
-        .tag--purple { background: var(--purple-light); color: var(--purple); }
-        .tag--orange { background: var(--orange-light); color: var(--orange); }
-
-        .research-link {
-            display: inline-flex;
-            align-items: center;
-            gap: 0.35rem;
-            font-size: 0.8rem;
-            font-weight: 600;
-            color: var(--accent);
-            text-decoration: none;
-            margin-top: 0.6rem;
-            transition: gap 0.2s;
-        }
-        .research-link:hover { gap: 0.6rem; }
-
-        /* ===== PUBLICATIONS ===== */
-        .pub-list {
-            display: flex;
-            flex-direction: column;
-            gap: 1.2rem;
-        }
-
-        .pub-item {
-            display: flex;
-            gap: 1rem;
-            align-items: flex-start;
-        }
-
-        .pub-num {
-            flex-shrink: 0;
-            width: 32px;
-            height: 32px;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 0.75rem;
-            font-weight: 700;
-            margin-top: 0.2rem;
-        }
-
-        .pub-num--journal { background: var(--accent-light); color: var(--accent); }
-        .pub-num--conf { background: var(--teal-light); color: var(--teal); }
-        .pub-num--prep { background: var(--purple-light); color: var(--purple); }
-
-        .pub-title {
-            font-size: 0.92rem;
-            font-weight: 600;
-            color: var(--heading);
-            line-height: 1.5;
-        }
-
-        .pub-venue {
-            font-family: var(--font-serif);
-            font-size: 0.85rem;
-            font-style: italic;
-            color: var(--text-muted);
-            margin-top: 0.15rem;
-        }
-
-        .pub-badge {
-            display: inline-block;
-            font-size: 0.68rem;
-            font-weight: 700;
-            padding: 0.15rem 0.5rem;
-            border-radius: 3px;
-            background: var(--orange-light);
-            color: var(--orange);
-            margin-top: 0.3rem;
-        }
-
-        /* ===== SKILLS BARS ===== */
-        .skills-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 2.5rem;
-        }
-
-        .skill-category-title {
-            font-size: 1.05rem;
-            font-weight: 800;
-            color: var(--heading);
-            margin-bottom: 1rem;
-        }
-
-        .skill-item {
-            display: flex;
-            align-items: center;
-            gap: 0.8rem;
-            margin-bottom: 1rem;
-        }
-
-        .skill-item:last-child { margin-bottom: 0; }
-
-        .skill-icon {
-            flex-shrink: 0;
-            width: 32px;
-            height: 32px;
-            border-radius: 6px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-
-        .skill-icon--blue { background: var(--accent-light); color: var(--accent); }
-        .skill-icon--teal { background: var(--teal-light); color: var(--teal); }
-
-        .skill-info { flex: 1; }
-
-        .skill-name {
-            font-size: 0.82rem;
-            font-weight: 700;
-            color: var(--heading);
-            text-transform: uppercase;
-            letter-spacing: 0.04em;
-        }
-
-        .skill-bar {
-            height: 6px;
-            background: #edf2f7;
-            border-radius: 3px;
-            margin-top: 0.35rem;
-            overflow: hidden;
-        }
-
-        .skill-bar-fill {
-            height: 100%;
-            border-radius: 3px;
-            transition: width 1s ease-out;
-        }
-
-        .skill-bar-fill--blue { background: linear-gradient(90deg, #42a5f5, #1565c0); }
-        .skill-bar-fill--teal { background: linear-gradient(90deg, #4db6ac, #00897b); }
-        .skill-bar-fill--orange { background: linear-gradient(90deg, #ffb74d, #ef6c00); }
-        .skill-bar-fill--purple { background: linear-gradient(90deg, #ba68c8, #7b1fa2); }
-
-        /* ===== FOOTER ===== */
-        footer {
-            text-align: center;
-            padding: 2rem 1.5rem;
-            border-top: 1px solid var(--border);
-            margin-top: 2rem;
-        }
-
-        footer p {
-            font-size: 0.78rem;
-            color: var(--text-muted);
-        }
-
-        footer a {
-            color: var(--accent);
-            text-decoration: none;
-        }
-
-        /* ===== RESPONSIVE ===== */
-        @media (max-width: 768px) {
-            .nav-links { display: none; }
-            .nav-links.open {
-                display: flex;
-                flex-direction: column;
-                position: absolute;
-                top: 56px; left: 0; right: 0;
-                background: rgba(255,255,255,0.97);
-                backdrop-filter: blur(12px);
-                padding: 1rem 1.5rem;
-                border-bottom: 1px solid var(--border);
-                gap: 0.8rem;
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- FontAwesome for robust, scalable vector icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Tailwind Configuration -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                    colors: {
+                        pitt: {
+                            blue: '#003594',
+                            gold: '#FFB81C'
+                        }
+                    }
+                }
             }
-            .nav-hamburger { display: block; }
-            .banner { height: 200px; }
-            .two-col { grid-template-columns: 1fr; gap: 2rem; }
-            .skills-grid { grid-template-columns: 1fr; }
-            .research-card-top { flex-direction: column; gap: 0.2rem; }
-            .profile-name { font-size: 1.5rem; }
         }
-
-        /* ===== SCROLL ANIMATIONS ===== */
-        .fade-in {
-            opacity: 0;
-            transform: translateY(18px);
-            transition: all 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+    </script>
+    <style>
+        /* Custom subtle animations */
+        .hover-card-lift {
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
         }
-        .fade-in.visible {
-            opacity: 1;
-            transform: translateY(0);
+        .hover-card-lift:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1), 0 8px 10px -6px rgba(0, 0, 0, 0.1);
         }
     </style>
 </head>
-<body>
+<body class="bg-slate-50 text-slate-800 antialiased selection:bg-blue-200 selection:text-blue-900">
 
-<!-- Nav -->
-<nav>
-    <div class="nav-inner">
-        <a href="#" class="nav-logo">Yukai Song</a>
-        <ul class="nav-links" id="navLinks">
-            <li><a href="#about">About</a></li>
-            <li><a href="#research">Research</a></li>
-            <li><a href="#publications">Publications</a></li>
-            <li><a href="#education">Education</a></li>
-            <li><a href="#skills">Skills</a></li>
-        </ul>
-        <button class="nav-hamburger" id="navToggle" aria-label="Menu">
-            <span></span><span></span><span></span>
-        </button>
-    </div>
-</nav>
+    <!-- Sticky Navigation Bar -->
+    <nav class="sticky top-0 z-50 bg-white/80 backdrop-blur-md border-b border-slate-200 shadow-sm">
+        <div class="max-w-5xl mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="#" class="text-xl font-bold text-slate-900 tracking-tight hover:text-blue-600 transition-colors">Yukai Song</a>
+            <div class="hidden md:flex space-x-8 text-sm font-medium text-slate-600">
+                <a href="#about" class="hover:text-blue-600 transition-colors">About</a>
+                <a href="#education" class="hover:text-blue-600 transition-colors">Education</a>
+                <a href="#skills" class="hover:text-blue-600 transition-colors">Skills</a>
+                <a href="#extracurricular" class="hover:text-blue-600 transition-colors">Extracurricular</a>
+            </div>
+            <!-- Mobile Menu Button (Optional, omitted for simplicity in static version, focus on fluid layout) -->
+        </div>
+    </nav>
 
-<!-- Banner -->
-<div class="banner"></div>
-
-<!-- Profile -->
-<section class="profile-section" id="about">
-    <div class="avatar-initials"><img src="Yukai_Song.jpg" alt="Yukai Song"></div>
-    <h1 class="profile-name">Yukai Song</h1>
-    <p class="profile-title">Ph.D. Candidate in Electrical &amp; Computer Engineering</p>
-    <p class="profile-org">University of Pittsburgh</p>
-
-    <div class="social-icons">
-        <a href="mailto:yus190@pitt.edu" class="social-icon" title="Email">
-            <svg viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
-        </a>
-        <a href="https://github.com/Kevin11Kaikai" target="_blank" class="social-icon" title="GitHub">
-            <svg viewBox="0 0 24 24"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
-        </a>
-        <a href="https://www.linkedin.com/in/yukai-song-711222208/" target="_blank" class="social-icon" title="LinkedIn">
-            <svg viewBox="0 0 24 24"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
-        </a>
-        <a href="https://scholar.google.com/citations?user=mQw90E0AAAAJ&hl=en" target="_blank" class="social-icon" title="Google Scholar">
-            <svg viewBox="0 0 24 24"><path d="M5.242 13.769L0 9.5 12 0l12 9.5-5.242 4.269C17.548 11.249 14.978 9.5 12 9.5c-2.977 0-5.548 1.748-6.758 4.269zM12 10a7 7 0 1 0 0 14 7 7 0 0 0 0-14z"/></svg>
-        </a>
-    </div>
-
-    <p class="bio">
-        I am a Ph.D. Candidate specializing in <strong>reliability-aware Machine Learning</strong> and <strong>Signal Processing</strong>
-        for high-stakes healthcare systems, with a focus on EEG-based modeling. My work centers on improving model
-        robustness, calibration, and failure-mode analysis under noisy real-world clinical conditions.
-    </p>
-
-    <a href="assets/Resume_Yukai_Song_Clinical_EEG.pdf" class="download-btn" download>
-        <svg viewBox="0 0 24 24" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
-        Download Résumé
-    </a>
-</section>
-
-<!-- Main Content -->
-<div class="content">
-
-    <!-- ===== RESEARCH ===== -->
-    <section class="section fade-in" id="research">
-        <h2 class="section-title">Research</h2>
-        <div class="research-list">
-
-            <div class="research-card">
-                <div class="research-card-top">
-                    <h3>Mitigating High-Confidence Errors in Sleep Stage Classification Using EEG Signals</h3>
-                    <span class="date">Dec 2025 – Present</span>
+    <main class="max-w-5xl mx-auto px-6 py-16 space-y-32">
+        
+        <!-- 1. Hero / About Section -->
+        <section id="about" class="scroll-mt-24">
+            <div class="flex flex-col-reverse md:flex-row gap-12 items-center md:items-start">
+                <div class="flex-1 space-y-6">
+                    <div class="space-y-3">
+                        <h1 class="text-4xl md:text-5xl font-extrabold text-slate-900 tracking-tight">
+                            Hi, I'm Yukai Song
+                        </h1>
+                        <h2 class="text-xl md:text-2xl text-blue-600 font-semibold flex items-center gap-2">
+                            <i class="fa-solid fa-graduation-cap text-lg"></i>
+                            Ph.D. Candidate @ University of Pittsburgh
+                        </h2>
+                        <h3 class="text-lg text-slate-500 font-medium">
+                            Software Engineer | AI Systems Developer
+                        </h3>
+                    </div>
+                    
+                    <div class="prose prose-slate prose-lg text-slate-600 leading-relaxed">
+                        <p>
+                            I am a Software Engineer and researcher with a profound passion for building scalable, high-performance systems. My academic and professional journey involves a deliberate pivot from hardware architecture and FPGA design to <strong>Software Engineering and AI Systems</strong>.
+                        </p>
+                        <p class="mt-4">
+                            This unique trajectory provides me with a distinct advantage: <strong>I understand how software executes at the silicon level.</strong> I leverage this deep understanding of computer architecture to optimize software logic, minimize latency, and build computationally efficient backends and machine learning pipelines.
+                        </p>
+                    </div>
+                    
+                    <!-- Call to Action / Social Links -->
+                    <div class="flex flex-wrap gap-4 pt-4">
+                        <a href="https://github.com/ys3493-web" target="_blank" rel="noreferrer" class="flex items-center space-x-2 px-5 py-2.5 bg-slate-900 text-white rounded-lg hover:bg-slate-800 transition-all shadow-sm">
+                            <i class="fa-brands fa-github text-lg"></i>
+                            <span>GitHub</span>
+                        </a>
+                        <a href="https://www.linkedin.com/in/yukai-song-711222208/" target="_blank" rel="noreferrer" class="flex items-center space-x-2 px-5 py-2.5 bg-white border border-slate-200 text-slate-700 rounded-lg hover:bg-slate-50 transition-all shadow-sm">
+                            <i class="fa-brands fa-linkedin text-lg text-blue-700"></i>
+                            <span>LinkedIn</span>
+                        </a>
+                        <!-- Add your email here -->
+                        <a href="mailto:your.email@pitt.edu" class="flex items-center space-x-2 px-5 py-2.5 bg-white border border-slate-200 text-slate-700 rounded-lg hover:bg-slate-50 transition-all shadow-sm">
+                            <i class="fa-solid fa-envelope text-lg text-slate-500"></i>
+                            <span>Email</span>
+                        </a>
+                    </div>
                 </div>
-                <div class="research-points">
-                    <p class="research-point">Developed a dual-expert (Transformer & Feature-based) two-stage reliability pipeline for EEG, designed for Algorithm Hardening in clinical systems.</p>
-                    <p class="research-point">Implemented risk-aware routing based on cross-model disagreement (Type-1 label mismatch and Type-2 distributional divergence) to detect and escalate high-risk cases.</p>
-                    <p class="research-point">Executed 20-fold LOSO evaluation on Sleep-EDF-20, identifying 1,923 High-Confidence Errors (HCEs).</p>
-                    <p class="research-point">Escalated only 18.8% of samples while reducing accepted-sample HCE rate to 1.62% (≈ 64.4% reduction).</p>
-                </div>
-                <div class="research-tags">
-                    <span class="tag tag--blue">EEG</span>
-                    <span class="tag tag--teal">Transformer</span>
-                    <span class="tag tag--purple">Reliability</span>
-                    <span class="tag tag--orange">Clinical ML</span>
+
+                <!-- Profile Image Area -->
+                <div class="w-56 h-56 md:w-72 md:h-72 shrink-0 relative">
+                    <!-- Pitt colors accent border -->
+                    <div class="absolute inset-0 rounded-full border-4 border-pitt-gold/30 translate-x-3 translate-y-3"></div>
+                    <div class="absolute inset-0 rounded-full bg-slate-200 overflow-hidden border-4 border-white shadow-xl z-10 flex items-center justify-center">
+                        <!-- Replace src with your actual image URL. Used an inline SVG placeholder for professional look -->
+                        <i class="fa-solid fa-user-astronaut text-6xl text-slate-400"></i>
+                        <!-- <img src="your-image-url.jpg" alt="Yukai Song" class="w-full h-full object-cover"> -->
+                    </div>
                 </div>
             </div>
+        </section>
 
-            <div class="research-card">
-                <div class="research-card-top">
-                    <h3>Two-Stage Voting for Robust and Efficient Suicide Risk Detection on Social Media</h3>
-                    <span class="date">Apr 2025 – Present</span>
+        <!-- 2. Education Section -->
+        <section id="education" class="scroll-mt-24">
+            <div class="flex items-center space-x-3 mb-10">
+                <div class="p-2.5 bg-blue-100 text-blue-700 rounded-lg">
+                    <i class="fa-solid fa-building-columns text-xl"></i>
                 </div>
-                <div class="research-points">
-                    <p class="research-point">Designed a two-stage voting architecture with length-confidence routing using fine-tuned BERT, filtering 67.6% of inputs for cost-efficient reasoning.</p>
-                    <p class="research-point">Stage 2 resolves ambiguous cases via BERT + LLM Agents Voting (max recall) and BERT + ML Voting over LLM-extracted psychological features (interpretability).</p>
-                    <p class="research-point">Achieved up to 99.7% F1 with cross-domain performance gap reduced to &lt;2%.</p>
-                </div>
-                <div class="research-tags">
-                    <span class="tag tag--blue">NLP</span>
-                    <span class="tag tag--teal">BERT</span>
-                    <span class="tag tag--purple">LLM Agents</span>
-                    <span class="tag tag--orange">Ensemble</span>
-                </div>
-                <a href="#" class="research-link">Paper Link →</a>
+                <h2 class="text-3xl font-bold text-slate-900">Education</h2>
             </div>
 
-            <div class="research-card">
-                <div class="research-card-top">
-                    <h3>Control-Aware Neural Network Pruning for Real-Time CPS Deployment</h3>
-                    <span class="date">Sep 2023 – Jul 2025</span>
+            <div class="relative border-l-2 border-slate-200 ml-4 md:ml-6 space-y-12">
+                <!-- Pitt -->
+                <div class="relative pl-8 md:pl-10">
+                    <div class="absolute -left-[11px] top-1 h-5 w-5 rounded-full bg-white border-4 border-blue-600 shadow"></div>
+                    <div class="hover-card-lift bg-white p-6 rounded-2xl border border-slate-100 shadow-sm relative overflow-hidden">
+                        <div class="absolute top-0 left-0 w-1 h-full bg-blue-600"></div>
+                        <div class="flex flex-col md:flex-row md:justify-between md:items-start gap-2 mb-2">
+                            <h3 class="text-xl font-bold text-slate-900">University of Pittsburgh</h3>
+                            <span class="inline-block px-3 py-1 bg-blue-50 text-blue-700 text-sm font-semibold rounded-full md:shrink-0">Present</span>
+                        </div>
+                        <h4 class="text-lg font-semibold text-slate-700 mb-3">Ph.D. Candidate</h4>
+                        <p class="text-slate-600 text-sm leading-relaxed">
+                            Focusing on the intersection of scalable software architecture and advanced artificial intelligence systems. Leveraging rigorous engineering methodologies to solve complex computational problems at scale.
+                        </p>
+                    </div>
                 </div>
-                <div class="research-points">
-                    <p class="research-point">Designed a modular pruning framework in PyTorch for real-time, resource-constrained deployment.</p>
-                    <p class="research-point">Integrated closed-loop safety constraints to jointly optimize latency and end-to-end system performance.</p>
-                    <p class="research-point">Achieved up to 148× acceleration while preserving system-level safety guarantees.</p>
+
+                <!-- Columbia -->
+                <div class="relative pl-8 md:pl-10">
+                    <div class="absolute -left-[11px] top-1 h-5 w-5 rounded-full bg-white border-4 border-slate-300"></div>
+                    <div class="hover-card-lift bg-white p-6 rounded-2xl border border-slate-100 shadow-sm">
+                        <div class="flex flex-col md:flex-row md:justify-between md:items-start gap-2 mb-2">
+                            <h3 class="text-xl font-bold text-slate-900">Columbia University</h3>
+                            <span class="inline-block text-slate-500 text-sm font-medium">New York, NY</span>
+                        </div>
+                        <h4 class="text-lg font-semibold text-slate-700 mb-3">Master of Science in Electrical Engineering</h4>
+                        <p class="text-slate-600 text-sm leading-relaxed">
+                            Transitioned coursework to focus heavily on intelligent systems, computing architectures, and software design principles. Established the theoretical foundation for high-performance computing.
+                        </p>
+                    </div>
                 </div>
-                <div class="research-tags">
-                    <span class="tag tag--blue">Model Pruning</span>
-                    <span class="tag tag--teal">CPS</span>
-                    <span class="tag tag--orange">Real-Time</span>
+
+                <!-- Glasgow -->
+                <div class="relative pl-8 md:pl-10">
+                    <div class="absolute -left-[11px] top-1 h-5 w-5 rounded-full bg-white border-4 border-slate-300"></div>
+                    <div class="hover-card-lift bg-white p-6 rounded-2xl border border-slate-100 shadow-sm">
+                        <div class="flex flex-col md:flex-row md:justify-between md:items-start gap-2 mb-2">
+                            <h3 class="text-xl font-bold text-slate-900">University of Glasgow</h3>
+                            <span class="inline-block text-slate-500 text-sm font-medium">Glasgow, UK</span>
+                        </div>
+                        <h4 class="text-lg font-semibold text-slate-700 mb-3">Bachelor of Engineering</h4>
+                        <p class="text-slate-600 text-sm leading-relaxed">
+                            Developed a strong foundation in analytical problem-solving, hardware architecture, and complex systems engineering.
+                        </p>
+                    </div>
                 </div>
             </div>
+        </section>
 
-            <div class="research-card">
-                <div class="research-card-top">
-                    <h3>Deep Learning for Contactless Human Motion Detection (RF-based)</h3>
-                    <span class="date">Sep 2021 – Dec 2022</span>
+        <!-- 3. Technical Skills Section -->
+        <section id="skills" class="scroll-mt-24">
+            <div class="flex items-center space-x-3 mb-10">
+                <div class="p-2.5 bg-blue-100 text-blue-700 rounded-lg">
+                    <i class="fa-solid fa-code text-xl"></i>
                 </div>
-                <div class="research-points">
-                    <p class="research-point">Applied Butterworth low-pass filter for signal processing refinement on RF-based human motion data.</p>
-                    <p class="research-point">Benchmarked CNN, RNN, ResNet variants — improved baseline accuracy from 93.8% to 98.6%.</p>
-                    <p class="research-point">Proved the impact of preprocessing over architecture: 99.1% final accuracy with LSTM + PCA.</p>
+                <h2 class="text-3xl font-bold text-slate-900">Technical Competencies</h2>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-6">
+                <!-- SWE -->
+                <div class="bg-white p-6 rounded-2xl border border-slate-100 shadow-sm hover-card-lift">
+                    <div class="flex items-center gap-3 mb-4 border-b border-slate-100 pb-4">
+                        <i class="fa-solid fa-laptop-code text-2xl text-blue-500"></i>
+                        <h3 class="font-bold text-lg text-slate-800">Software Engineering</h3>
+                    </div>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="px-3 py-1 bg-slate-100 text-slate-700 text-sm rounded-full">Python</span>
+                        <span class="px-3 py-1 bg-slate-100 text-slate-700 text-sm rounded-full">C/C++</span>
+                        <span class="px-3 py-1 bg-slate-100 text-slate-700 text-sm rounded-full">Java</span>
+                        <span class="px-3 py-1 bg-slate-100 text-slate-700 text-sm rounded-full">System Design</span>
+                        <span class="px-3 py-1 bg-slate-100 text-slate-700 text-sm rounded-full">Backend Architecture</span>
+                    </div>
                 </div>
-                <div class="research-tags">
-                    <span class="tag tag--blue">Signal Processing</span>
-                    <span class="tag tag--teal">RF Sensing</span>
-                    <span class="tag tag--purple">LSTM</span>
-                    <span class="tag tag--orange">Healthcare</span>
+
+                <!-- AI Systems -->
+                <div class="bg-white p-6 rounded-2xl border border-slate-100 shadow-sm hover-card-lift">
+                    <div class="flex items-center gap-3 mb-4 border-b border-slate-100 pb-4">
+                        <i class="fa-solid fa-network-wired text-2xl text-purple-500"></i>
+                        <h3 class="font-bold text-lg text-slate-800">AI & Machine Learning</h3>
+                    </div>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="px-3 py-1 bg-slate-100 text-slate-700 text-sm rounded-full">PyTorch</span>
+                        <span class="px-3 py-1 bg-slate-100 text-slate-700 text-sm rounded-full">TensorFlow</span>
+                        <span class="px-3 py-1 bg-slate-100 text-slate-700 text-sm rounded-full">Data Pipelines</span>
+                        <span class="px-3 py-1 bg-slate-100 text-slate-700 text-sm rounded-full">Model Optimization</span>
+                    </div>
                 </div>
-                <a href="https://doi.org/10.1038/s41598-022-25403-y" target="_blank" class="research-link">View Publication →</a>
+
+                <!-- Infra & Tools -->
+                <div class="bg-white p-6 rounded-2xl border border-slate-100 shadow-sm hover-card-lift">
+                    <div class="flex items-center gap-3 mb-4 border-b border-slate-100 pb-4">
+                        <i class="fa-solid fa-server text-2xl text-emerald-500"></i>
+                        <h3 class="font-bold text-lg text-slate-800">Infrastructure & Tools</h3>
+                    </div>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="px-3 py-1 bg-slate-100 text-slate-700 text-sm rounded-full">Linux/Unix</span>
+                        <span class="px-3 py-1 bg-slate-100 text-slate-700 text-sm rounded-full">Git</span>
+                        <span class="px-3 py-1 bg-slate-100 text-slate-700 text-sm rounded-full">Docker</span>
+                        <span class="px-3 py-1 bg-slate-100 text-slate-700 text-sm rounded-full">Cloud Computing</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 4. Extracurricular & Leadership (Table Tennis) -->
+        <section id="extracurricular" class="scroll-mt-24 pb-16">
+            <div class="flex items-center space-x-3 mb-10">
+                <div class="p-2.5 bg-blue-100 text-blue-700 rounded-lg">
+                    <i class="fa-solid fa-table-tennis-paddle-ball text-xl"></i>
+                </div>
+                <h2 class="text-3xl font-bold text-slate-900">Extracurricular & Leadership</h2>
+            </div>
+
+            <div class="bg-slate-900 text-white rounded-3xl overflow-hidden shadow-2xl">
+                <div class="flex flex-col md:flex-row">
+                    <!-- Text Content -->
+                    <div class="p-8 md:p-12 md:w-3/5 space-y-6 flex flex-col justify-center">
+                        <div class="inline-flex items-center gap-2 px-3 py-1 bg-blue-500/20 text-blue-300 text-xs font-bold tracking-wider uppercase rounded-full w-fit border border-blue-500/30">
+                            <i class="fa-solid fa-medal"></i> Varsity Athlete
+                        </div>
+                        <h3 class="text-2xl md:text-3xl font-bold leading-tight">
+                            University Varsity Table Tennis Team
+                        </h3>
+                        <p class="text-slate-300 text-base md:text-lg leading-relaxed">
+                            Beyond software engineering, I am a dedicated collegiate table tennis competitor. Participating in high-level tournaments demands rigorous physical training and immense mental discipline.
+                        </p>
+                        <ul class="space-y-3 mt-4 text-slate-300">
+                            <li class="flex items-start gap-3">
+                                <i class="fa-solid fa-check text-blue-400 mt-1"></i>
+                                <span><strong>Rapid Decision-Making:</strong> Processing high-speed information and reacting tactically under extreme pressure.</span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <i class="fa-solid fa-check text-blue-400 mt-1"></i>
+                                <span><strong>Strategic Execution:</strong> Analyzing opponents and adjusting game plans dynamically, akin to iterative software debugging and system optimization.</span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <i class="fa-solid fa-check text-blue-400 mt-1"></i>
+                                <span><strong>Discipline & Resilience:</strong> Balancing rigorous academic research with elite athletic training schedules.</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <!-- Abstract/Iconic Graphic Area (Replacing image block for self-contained HTML) -->
+                    <div class="bg-gradient-to-br from-blue-900 to-slate-800 md:w-2/5 p-8 flex items-center justify-center border-t md:border-t-0 md:border-l border-slate-700 relative overflow-hidden">
+                        <!-- Background decoration -->
+                        <div class="absolute inset-0 opacity-10" style="background-image: radial-gradient(circle at 2px 2px, white 1px, transparent 0); background-size: 24px 24px;"></div>
+                        <i class="fa-solid fa-trophy text-9xl text-slate-700/50 transform -rotate-12 absolute -right-6 -bottom-6"></i>
+                        <div class="relative z-10 text-center space-y-4">
+                            <div class="w-24 h-24 bg-blue-500/20 rounded-full flex items-center justify-center mx-auto border-2 border-blue-400/50 shadow-[0_0_30px_rgba(59,130,246,0.3)]">
+                                <i class="fa-solid fa-table-tennis-paddle-ball text-4xl text-blue-300"></i>
+                            </div>
+                            <p class="font-medium text-blue-200 tracking-wide">COMPETITIVE DRIVE</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-slate-900 text-slate-400 py-10 border-t border-slate-800">
+        <div class="max-w-5xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-6">
+            <p class="text-sm">
+                &copy; <span id="year"></span> Yukai Song. All rights reserved.
+            </p>
+            <div class="flex space-x-6">
+                <a href="https://github.com/ys3493-web" target="_blank" class="hover:text-white transition-colors"><i class="fa-brands fa-github text-xl"></i></a>
+                <a href="https://www.linkedin.com/in/yukai-song-711222208/" target="_blank" class="hover:text-white transition-colors"><i class="fa-brands fa-linkedin text-xl"></i></a>
             </div>
         </div>
-    </section>
+    </footer>
 
-    <!-- ===== PUBLICATIONS ===== -->
-    <section class="section fade-in" id="publications">
-        <h2 class="section-title">Publications</h2>
-        <div class="pub-list">
-            <div class="pub-item">
-                <div class="pub-num pub-num--prep">1</div>
-                <div>
-                    <p class="pub-title"><strong>Song, Y.</strong>, et al. "Two-Stage Voting for Robust and Efficient Suicide Risk Detection on Social Media."</p>
-                    <p class="pub-venue">Manuscript in preparation — EMNLP 2026</p>
-                </div>
-            </div>
-            <div class="pub-item">
-                <div class="pub-num pub-num--journal">2</div>
-                <div>
-                    <p class="pub-title"><strong>Song, Y.</strong>, Taylor, W., Ge, Y., et al. "Evaluation of deep learning models in contactless human motion detection system for next generation healthcare."</p>
-                    <p class="pub-venue">Scientific Reports, 12, 21592 (2022)</p>
-                </div>
-            </div>
-            <div class="pub-item">
-                <div class="pub-num pub-num--conf">3</div>
-                <div>
-                    <p class="pub-title"><strong>Song, Y.</strong>, Taylor, W., Ge, Y., et al. "Design and Implementation of a Contactless AI-enabled Human Motion Detection System for Next-Generation Healthcare."</p>
-                    <p class="pub-venue">IEEE SmartIoT, pp. 112–119 (2021)</p>
-                    <span class="pub-badge">★ Best Paper Award</span>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- ===== EDUCATION & AWARDS ===== -->
-    <section class="section fade-in" id="education">
-        <div class="two-col">
-            <div>
-                <h2 class="section-title">Education</h2>
-
-                <div class="entry">
-                    <div class="entry-icon entry-icon--blue">
-                        <svg viewBox="0 0 24 24"><path d="M12 3L1 9l4 2.18v6L12 21l7-3.82v-6l2-1.09V17h2V9L12 3zm6.82 6L12 12.72 5.18 9 12 5.28 18.82 9zM17 15.99l-5 2.73-5-2.73v-3.72L12 15l5-2.73v3.72z"/></svg>
-                    </div>
-                    <div>
-                        <div class="entry-title">Ph.D. in Electrical &amp; Computer Engineering</div>
-                        <div class="entry-org">University of Pittsburgh</div>
-                        <div class="entry-date">Aug 2023 – Present</div>
-                        <div class="entry-desc">GPA: 4.0 · Advisors: Prof. Jingtong Hu, Prof. Zhi-Hong Mao</div>
-                    </div>
-                </div>
-
-                <div class="entry">
-                    <div class="entry-icon entry-icon--teal">
-                        <svg viewBox="0 0 24 24"><path d="M12 3L1 9l4 2.18v6L12 21l7-3.82v-6l2-1.09V17h2V9L12 3zm6.82 6L12 12.72 5.18 9 12 5.28 18.82 9zM17 15.99l-5 2.73-5-2.73v-3.72L12 15l5-2.73v3.72z"/></svg>
-                    </div>
-                    <div>
-                        <div class="entry-title">M.S. in Electrical Engineering</div>
-                        <div class="entry-org">Columbia University</div>
-                        <div class="entry-date">Sep 2021 – Feb 2023</div>
-                        <div class="entry-desc">GPA: 3.96</div>
-                    </div>
-                </div>
-
-                <div class="entry">
-                    <div class="entry-icon entry-icon--purple">
-                        <svg viewBox="0 0 24 24"><path d="M12 3L1 9l4 2.18v6L12 21l7-3.82v-6l2-1.09V17h2V9L12 3zm6.82 6L12 12.72 5.18 9 12 5.28 18.82 9zM17 15.99l-5 2.73-5-2.73v-3.72L12 15l5-2.73v3.72z"/></svg>
-                    </div>
-                    <div>
-                        <div class="entry-title">B.S. in Electronic Information Engineering</div>
-                        <div class="entry-org">UESTC — Glasgow College</div>
-                        <div class="entry-date">Sep 2017 – Jun 2021</div>
-                        <div class="entry-desc">GPA: 3.92 · Rank: 1st / 257 · National Scholarship (Top 2%) · First Class Honours</div>
-                    </div>
-                </div>
-            </div>
-
-            <div>
-                <h2 class="section-title">Awards</h2>
-
-                <div class="entry">
-                    <div class="entry-icon entry-icon--blue">
-                        <svg viewBox="0 0 24 24"><path d="M19 5h-2V3H7v2H5c-1.1 0-2 .9-2 2v1c0 2.55 1.92 4.63 4.39 4.94.63 1.5 1.98 2.63 3.61 2.96V19H7v2h10v-2h-4v-3.1c1.63-.33 2.98-1.46 3.61-2.96C19.08 12.63 21 10.55 21 8V7c0-1.1-.9-2-2-2zM5 8V7h2v3.82C5.84 10.4 5 9.3 5 8zm14 0c0 1.3-.84 2.4-2 2.82V7h2v1z"/></svg>
-                    </div>
-                    <div>
-                        <div class="entry-title">Best Paper Award</div>
-                        <div class="entry-org">IEEE SmartIoT 2021</div>
-                        <div class="entry-desc">For "Design and Implementation of a Contactless AI-enabled Human Motion Detection System"</div>
-                    </div>
-                </div>
-
-                <div class="entry">
-                    <div class="entry-icon entry-icon--teal">
-                        <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
-                    </div>
-                    <div>
-                        <div class="entry-title">National Scholarship</div>
-                        <div class="entry-org">Ministry of Education, China</div>
-                        <div class="entry-desc">Top 2% of all undergraduate students</div>
-                    </div>
-                </div>
-
-                <div class="entry">
-                    <div class="entry-icon entry-icon--purple">
-                        <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
-                    </div>
-                    <div>
-                        <div class="entry-title">Rank 1st / 257</div>
-                        <div class="entry-org">UESTC Glasgow College</div>
-                        <div class="entry-desc">First Class Honours, Joint Program with University of Glasgow</div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- ===== SKILLS ===== -->
-    <section class="section fade-in" id="skills">
-        <h2 class="section-title">Technical Skills</h2>
-        <div class="skills-grid">
-            <div>
-                <div class="skill-category-title">LLM & Frameworks</div>
-                <div class="skill-item">
-                    <div class="skill-icon skill-icon--blue">
-                        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M9.4 16.6L4.8 12l4.6-4.6L8 6l-6 6 6 6 1.4-1.4zm5.2 0L19.2 12l-4.6-4.6L16 6l6 6-6 6-1.4-1.4z"/></svg>
-                    </div>
-                    <div class="skill-info">
-                        <div class="skill-name">PyTorch</div>
-                        <div class="skill-bar"><div class="skill-bar-fill skill-bar-fill--blue" style="width:95%"></div></div>
-                    </div>
-                </div>
-                <div class="skill-item">
-                    <div class="skill-icon skill-icon--blue">
-                        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M9.4 16.6L4.8 12l4.6-4.6L8 6l-6 6 6 6 1.4-1.4zm5.2 0L19.2 12l-4.6-4.6L16 6l6 6-6 6-1.4-1.4z"/></svg>
-                    </div>
-                    <div class="skill-info">
-                        <div class="skill-name">HuggingFace Transformers</div>
-                        <div class="skill-bar"><div class="skill-bar-fill skill-bar-fill--blue" style="width:90%"></div></div>
-                    </div>
-                </div>
-                <div class="skill-item">
-                    <div class="skill-icon skill-icon--blue">
-                        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M9.4 16.6L4.8 12l4.6-4.6L8 6l-6 6 6 6 1.4-1.4zm5.2 0L19.2 12l-4.6-4.6L16 6l6 6-6 6-1.4-1.4z"/></svg>
-                    </div>
-                    <div class="skill-info">
-                        <div class="skill-name">TensorFlow</div>
-                        <div class="skill-bar"><div class="skill-bar-fill skill-bar-fill--blue" style="width:80%"></div></div>
-                    </div>
-                </div>
-                <div class="skill-item">
-                    <div class="skill-icon skill-icon--blue">
-                        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M9.4 16.6L4.8 12l4.6-4.6L8 6l-6 6 6 6 1.4-1.4zm5.2 0L19.2 12l-4.6-4.6L16 6l6 6-6 6-1.4-1.4z"/></svg>
-                    </div>
-                    <div class="skill-info">
-                        <div class="skill-name">LangChain / OpenAI API</div>
-                        <div class="skill-bar"><div class="skill-bar-fill skill-bar-fill--blue" style="width:85%"></div></div>
-                    </div>
-                </div>
-            </div>
-
-            <div>
-                <div class="skill-category-title">Languages & Specialized</div>
-                <div class="skill-item">
-                    <div class="skill-icon skill-icon--teal">
-                        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M9.4 16.6L4.8 12l4.6-4.6L8 6l-6 6 6 6 1.4-1.4zm5.2 0L19.2 12l-4.6-4.6L16 6l6 6-6 6-1.4-1.4z"/></svg>
-                    </div>
-                    <div class="skill-info">
-                        <div class="skill-name">Python</div>
-                        <div class="skill-bar"><div class="skill-bar-fill skill-bar-fill--teal" style="width:95%"></div></div>
-                    </div>
-                </div>
-                <div class="skill-item">
-                    <div class="skill-icon skill-icon--teal">
-                        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M9.4 16.6L4.8 12l4.6-4.6L8 6l-6 6 6 6 1.4-1.4zm5.2 0L19.2 12l-4.6-4.6L16 6l6 6-6 6-1.4-1.4z"/></svg>
-                    </div>
-                    <div class="skill-info">
-                        <div class="skill-name">C/C++ & CUDA</div>
-                        <div class="skill-bar"><div class="skill-bar-fill skill-bar-fill--teal" style="width:75%"></div></div>
-                    </div>
-                </div>
-                <div class="skill-item">
-                    <div class="skill-icon skill-icon--teal">
-                        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M9.4 16.6L4.8 12l4.6-4.6L8 6l-6 6 6 6 1.4-1.4zm5.2 0L19.2 12l-4.6-4.6L16 6l6 6-6 6-1.4-1.4z"/></svg>
-                    </div>
-                    <div class="skill-info">
-                        <div class="skill-name">Signal Processing</div>
-                        <div class="skill-bar"><div class="skill-bar-fill skill-bar-fill--orange" style="width:90%"></div></div>
-                    </div>
-                </div>
-                <div class="skill-item">
-                    <div class="skill-icon skill-icon--teal">
-                        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M9.4 16.6L4.8 12l4.6-4.6L8 6l-6 6 6 6 1.4-1.4zm5.2 0L19.2 12l-4.6-4.6L16 6l6 6-6 6-1.4-1.4z"/></svg>
-                    </div>
-                    <div class="skill-info">
-                        <div class="skill-name">Docker / AWS / Git</div>
-                        <div class="skill-bar"><div class="skill-bar-fill skill-bar-fill--purple" style="width:80%"></div></div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-</div>
-
-<!-- Footer -->
-<footer>
-    <p>&copy; 2025 Yukai Song · Powered by <a href="https://pages.github.com" target="_blank">GitHub Pages</a></p>
-</footer>
-
-<script>
-    // Mobile nav
-    document.getElementById('navToggle').addEventListener('click', () => {
-        document.getElementById('navLinks').classList.toggle('open');
-    });
-    document.querySelectorAll('#navLinks a').forEach(a => {
-        a.addEventListener('click', () => document.getElementById('navLinks').classList.remove('open'));
-    });
-
-    // Scroll reveal
-    const obs = new IntersectionObserver((entries) => {
-        entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
-    }, { threshold: 0.08 });
-    document.querySelectorAll('.fade-in').forEach(el => obs.observe(el));
-
-    // Animate skill bars on scroll
-    const skillObs = new IntersectionObserver((entries) => {
-        entries.forEach(e => {
-            if (e.isIntersecting) {
-                e.target.querySelectorAll('.skill-bar-fill').forEach(bar => {
-                    const w = bar.style.width;
-                    bar.style.width = '0%';
-                    requestAnimationFrame(() => {
-                        requestAnimationFrame(() => { bar.style.width = w; });
-                    });
-                });
-            
+    <!-- Simple script for dynamic year -->
+    <script>
+        document.getElementById('year').textContent = new Date().getFullYear();
+    </script>
+</body>
+</html>
