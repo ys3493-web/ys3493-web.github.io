@@ -1,309 +1,292 @@
 <!DOCTYPE html>
 <html lang="en" class="scroll-smooth">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Yukai Song | Software Engineer & Ph.D. Candidate</title>
-    
-    <!-- Tailwind CSS via CDN for rapid styling without build tools -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    
-    <!-- Google Fonts: Inter for a clean, modern, tech-focused typography -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-    
-    <!-- FontAwesome for robust, scalable vector icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Yukai Song | Machine Learning Researcher & Ph.D. Candidate</title>
+  <meta name="description" content="Yukai Song — Ph.D. Candidate at University of Pittsburgh. Reliability-aware ML for EEG and safety-critical systems; high-confidence error detection and risk-aware routing." />
 
-    <!-- Tailwind Configuration -->
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    fontFamily: {
-                        sans: ['Inter', 'sans-serif'],
-                    },
-                    colors: {
-                        pitt: {
-                            blue: '#003594',
-                            gold: '#FFB81C'
-                        }
-                    }
-                }
-            }
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: { sans: ['Inter', 'sans-serif'] },
+          colors: { pitt: { blue: '#003594', gold: '#FFB81C' } }
         }
-    </script>
-    <style>
-        /* Custom subtle animations */
-        .hover-card-lift {
-            transition: transform 0.2s ease, box-shadow 0.2s ease;
-        }
-        .hover-card-lift:hover {
-            transform: translateY(-4px);
-            box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1), 0 8px 10px -6px rgba(0, 0, 0, 0.1);
-        }
-    </style>
+      }
+    }
+  </script>
+
+  <style>
+    .hover-card-lift { transition: transform .2s ease, box-shadow .2s ease; }
+    .hover-card-lift:hover { transform: translateY(-4px); box-shadow: 0 10px 25px -5px rgba(0,0,0,.1), 0 8px 10px -6px rgba(0,0,0,.1); }
+  </style>
 </head>
+
 <body class="bg-slate-50 text-slate-800 antialiased selection:bg-blue-200 selection:text-blue-900">
 
-    <!-- Sticky Navigation Bar -->
-    <nav class="sticky top-0 z-50 bg-white/80 backdrop-blur-md border-b border-slate-200 shadow-sm">
-        <div class="max-w-5xl mx-auto px-6 py-4 flex justify-between items-center">
-            <a href="#" class="text-xl font-bold text-slate-900 tracking-tight hover:text-blue-600 transition-colors">Yukai Song</a>
-            <div class="hidden md:flex space-x-8 text-sm font-medium text-slate-600">
-                <a href="#about" class="hover:text-blue-600 transition-colors">About</a>
-                <a href="#education" class="hover:text-blue-600 transition-colors">Education</a>
-                <a href="#skills" class="hover:text-blue-600 transition-colors">Skills</a>
-                <a href="#extracurricular" class="hover:text-blue-600 transition-colors">Extracurricular</a>
-            </div>
-            <!-- Mobile Menu Button (Optional, omitted for simplicity in static version, focus on fluid layout) -->
-        </div>
-    </nav>
+  <!-- Nav -->
+  <nav class="sticky top-0 z-50 bg-white/80 backdrop-blur-md border-b border-slate-200 shadow-sm">
+    <div class="max-w-5xl mx-auto px-6 py-4 flex justify-between items-center">
+      <a href="#" class="text-xl font-bold text-slate-900 tracking-tight hover:text-blue-600 transition-colors">Yukai Song</a>
+      <div class="hidden md:flex space-x-8 text-sm font-medium text-slate-600">
+        <a href="#about" class="hover:text-blue-600 transition-colors">About</a>
+        <a href="#research" class="hover:text-blue-600 transition-colors">Research</a>
+        <a href="#publications" class="hover:text-blue-600 transition-colors">Publications</a>
+        <a href="#education" class="hover:text-blue-600 transition-colors">Education</a>
+        <a href="#skills" class="hover:text-blue-600 transition-colors">Skills</a>
+        <a href="#extracurricular" class="hover:text-blue-600 transition-colors">Beyond Research</a>
+      </div>
+    </div>
+  </nav>
 
-    <main class="max-w-5xl mx-auto px-6 py-16 space-y-32">
-        
-        <!-- 1. Hero / About Section -->
-        <section id="about" class="scroll-mt-24">
-            <div class="flex flex-col-reverse md:flex-row gap-12 items-center md:items-start">
-                <div class="flex-1 space-y-6">
-                    <div class="space-y-3">
-                        <h1 class="text-4xl md:text-5xl font-extrabold text-slate-900 tracking-tight">
-                            Hi, I'm Yukai Song
-                        </h1>
-                        <h2 class="text-xl md:text-2xl text-blue-600 font-semibold flex items-center gap-2">
-                            <i class="fa-solid fa-graduation-cap text-lg"></i>
-                            Ph.D. Candidate @ University of Pittsburgh
-                        </h2>
-                        <h3 class="text-lg text-slate-500 font-medium">
-                            Software Engineer | AI Systems Developer
-                        </h3>
-                    </div>
-                    
-                    <div class="prose prose-slate prose-lg text-slate-600 leading-relaxed">
-                        <p>
-                            I am a Software Engineer and researcher with a profound passion for building scalable, high-performance systems. My academic and professional journey involves a deliberate pivot from hardware architecture and FPGA design to <strong>Software Engineering and AI Systems</strong>.
-                        </p>
-                        <p class="mt-4">
-                            This unique trajectory provides me with a distinct advantage: <strong>I understand how software executes at the silicon level.</strong> I leverage this deep understanding of computer architecture to optimize software logic, minimize latency, and build computationally efficient backends and machine learning pipelines.
-                        </p>
-                    </div>
-                    
-                    <!-- Call to Action / Social Links -->
-                    <div class="flex flex-wrap gap-4 pt-4">
-                        <a href="https://github.com/ys3493-web" target="_blank" rel="noreferrer" class="flex items-center space-x-2 px-5 py-2.5 bg-slate-900 text-white rounded-lg hover:bg-slate-800 transition-all shadow-sm">
-                            <i class="fa-brands fa-github text-lg"></i>
-                            <span>GitHub</span>
-                        </a>
-                        <a href="https://www.linkedin.com/in/yukai-song-711222208/" target="_blank" rel="noreferrer" class="flex items-center space-x-2 px-5 py-2.5 bg-white border border-slate-200 text-slate-700 rounded-lg hover:bg-slate-50 transition-all shadow-sm">
-                            <i class="fa-brands fa-linkedin text-lg text-blue-700"></i>
-                            <span>LinkedIn</span>
-                        </a>
-                        <!-- Add your email here -->
-                        <a href="mailto:your.email@pitt.edu" class="flex items-center space-x-2 px-5 py-2.5 bg-white border border-slate-200 text-slate-700 rounded-lg hover:bg-slate-50 transition-all shadow-sm">
-                            <i class="fa-solid fa-envelope text-lg text-slate-500"></i>
-                            <span>Email</span>
-                        </a>
-                    </div>
-                </div>
+  <main class="max-w-5xl mx-auto px-6 py-16 space-y-28">
 
-                <!-- Profile Image Area -->
-                <div class="w-56 h-56 md:w-72 md:h-72 shrink-0 relative">
-                    <!-- Pitt colors accent border -->
-                    <div class="absolute inset-0 rounded-full border-4 border-pitt-gold/30 translate-x-3 translate-y-3"></div>
-                    <div class="absolute inset-0 rounded-full bg-slate-200 overflow-hidden border-4 border-white shadow-xl z-10 flex items-center justify-center">
-                        <!-- Replace src with your actual image URL. Used an inline SVG placeholder for professional look -->
-                        <i class="fa-solid fa-user-astronaut text-6xl text-slate-400"></i>
-                        <!-- <img src="your-image-url.jpg" alt="Yukai Song" class="w-full h-full object-cover"> -->
-                    </div>
-                </div>
-            </div>
-        </section>
+    <!-- About / Hero -->
+    <section id="about" class="scroll-mt-24">
+      <div class="flex flex-col-reverse md:flex-row gap-12 items-center md:items-start">
+        <div class="flex-1 space-y-6">
+          <div class="space-y-3">
+            <h1 class="text-4xl md:text-5xl font-extrabold text-slate-900 tracking-tight">Hi, I'm Yukai Song</h1>
+            <h2 class="text-xl md:text-2xl text-blue-600 font-semibold flex items-center gap-2">
+              <i class="fa-solid fa-graduation-cap text-lg"></i>
+              Ph.D. Candidate @ University of Pittsburgh
+            </h2>
+            <h3 class="text-lg text-slate-500 font-medium">
+              Reliability-aware Machine Learning • EEG • Safety-Critical AI
+            </h3>
+          </div>
 
-        <!-- 2. Education Section -->
-        <section id="education" class="scroll-mt-24">
-            <div class="flex items-center space-x-3 mb-10">
-                <div class="p-2.5 bg-blue-100 text-blue-700 rounded-lg">
-                    <i class="fa-solid fa-building-columns text-xl"></i>
-                </div>
-                <h2 class="text-3xl font-bold text-slate-900">Education</h2>
-            </div>
-
-            <div class="relative border-l-2 border-slate-200 ml-4 md:ml-6 space-y-12">
-                <!-- Pitt -->
-                <div class="relative pl-8 md:pl-10">
-                    <div class="absolute -left-[11px] top-1 h-5 w-5 rounded-full bg-white border-4 border-blue-600 shadow"></div>
-                    <div class="hover-card-lift bg-white p-6 rounded-2xl border border-slate-100 shadow-sm relative overflow-hidden">
-                        <div class="absolute top-0 left-0 w-1 h-full bg-blue-600"></div>
-                        <div class="flex flex-col md:flex-row md:justify-between md:items-start gap-2 mb-2">
-                            <h3 class="text-xl font-bold text-slate-900">University of Pittsburgh</h3>
-                            <span class="inline-block px-3 py-1 bg-blue-50 text-blue-700 text-sm font-semibold rounded-full md:shrink-0">Present</span>
-                        </div>
-                        <h4 class="text-lg font-semibold text-slate-700 mb-3">Ph.D. Candidate</h4>
-                        <p class="text-slate-600 text-sm leading-relaxed">
-                            Focusing on the intersection of scalable software architecture and advanced artificial intelligence systems. Leveraging rigorous engineering methodologies to solve complex computational problems at scale.
-                        </p>
-                    </div>
-                </div>
-
-                <!-- Columbia -->
-                <div class="relative pl-8 md:pl-10">
-                    <div class="absolute -left-[11px] top-1 h-5 w-5 rounded-full bg-white border-4 border-slate-300"></div>
-                    <div class="hover-card-lift bg-white p-6 rounded-2xl border border-slate-100 shadow-sm">
-                        <div class="flex flex-col md:flex-row md:justify-between md:items-start gap-2 mb-2">
-                            <h3 class="text-xl font-bold text-slate-900">Columbia University</h3>
-                            <span class="inline-block text-slate-500 text-sm font-medium">New York, NY</span>
-                        </div>
-                        <h4 class="text-lg font-semibold text-slate-700 mb-3">Master of Science in Electrical Engineering</h4>
-                        <p class="text-slate-600 text-sm leading-relaxed">
-                            Transitioned coursework to focus heavily on intelligent systems, computing architectures, and software design principles. Established the theoretical foundation for high-performance computing.
-                        </p>
-                    </div>
-                </div>
-
-                <!-- Glasgow -->
-                <div class="relative pl-8 md:pl-10">
-                    <div class="absolute -left-[11px] top-1 h-5 w-5 rounded-full bg-white border-4 border-slate-300"></div>
-                    <div class="hover-card-lift bg-white p-6 rounded-2xl border border-slate-100 shadow-sm">
-                        <div class="flex flex-col md:flex-row md:justify-between md:items-start gap-2 mb-2">
-                            <h3 class="text-xl font-bold text-slate-900">University of Glasgow</h3>
-                            <span class="inline-block text-slate-500 text-sm font-medium">Glasgow, UK</span>
-                        </div>
-                        <h4 class="text-lg font-semibold text-slate-700 mb-3">Bachelor of Engineering</h4>
-                        <p class="text-slate-600 text-sm leading-relaxed">
-                            Developed a strong foundation in analytical problem-solving, hardware architecture, and complex systems engineering.
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- 3. Technical Skills Section -->
-        <section id="skills" class="scroll-mt-24">
-            <div class="flex items-center space-x-3 mb-10">
-                <div class="p-2.5 bg-blue-100 text-blue-700 rounded-lg">
-                    <i class="fa-solid fa-code text-xl"></i>
-                </div>
-                <h2 class="text-3xl font-bold text-slate-900">Technical Competencies</h2>
-            </div>
-
-            <div class="grid md:grid-cols-3 gap-6">
-                <!-- SWE -->
-                <div class="bg-white p-6 rounded-2xl border border-slate-100 shadow-sm hover-card-lift">
-                    <div class="flex items-center gap-3 mb-4 border-b border-slate-100 pb-4">
-                        <i class="fa-solid fa-laptop-code text-2xl text-blue-500"></i>
-                        <h3 class="font-bold text-lg text-slate-800">Software Engineering</h3>
-                    </div>
-                    <div class="flex flex-wrap gap-2">
-                        <span class="px-3 py-1 bg-slate-100 text-slate-700 text-sm rounded-full">Python</span>
-                        <span class="px-3 py-1 bg-slate-100 text-slate-700 text-sm rounded-full">C/C++</span>
-                        <span class="px-3 py-1 bg-slate-100 text-slate-700 text-sm rounded-full">Java</span>
-                        <span class="px-3 py-1 bg-slate-100 text-slate-700 text-sm rounded-full">System Design</span>
-                        <span class="px-3 py-1 bg-slate-100 text-slate-700 text-sm rounded-full">Backend Architecture</span>
-                    </div>
-                </div>
-
-                <!-- AI Systems -->
-                <div class="bg-white p-6 rounded-2xl border border-slate-100 shadow-sm hover-card-lift">
-                    <div class="flex items-center gap-3 mb-4 border-b border-slate-100 pb-4">
-                        <i class="fa-solid fa-network-wired text-2xl text-purple-500"></i>
-                        <h3 class="font-bold text-lg text-slate-800">AI & Machine Learning</h3>
-                    </div>
-                    <div class="flex flex-wrap gap-2">
-                        <span class="px-3 py-1 bg-slate-100 text-slate-700 text-sm rounded-full">PyTorch</span>
-                        <span class="px-3 py-1 bg-slate-100 text-slate-700 text-sm rounded-full">TensorFlow</span>
-                        <span class="px-3 py-1 bg-slate-100 text-slate-700 text-sm rounded-full">Data Pipelines</span>
-                        <span class="px-3 py-1 bg-slate-100 text-slate-700 text-sm rounded-full">Model Optimization</span>
-                    </div>
-                </div>
-
-                <!-- Infra & Tools -->
-                <div class="bg-white p-6 rounded-2xl border border-slate-100 shadow-sm hover-card-lift">
-                    <div class="flex items-center gap-3 mb-4 border-b border-slate-100 pb-4">
-                        <i class="fa-solid fa-server text-2xl text-emerald-500"></i>
-                        <h3 class="font-bold text-lg text-slate-800">Infrastructure & Tools</h3>
-                    </div>
-                    <div class="flex flex-wrap gap-2">
-                        <span class="px-3 py-1 bg-slate-100 text-slate-700 text-sm rounded-full">Linux/Unix</span>
-                        <span class="px-3 py-1 bg-slate-100 text-slate-700 text-sm rounded-full">Git</span>
-                        <span class="px-3 py-1 bg-slate-100 text-slate-700 text-sm rounded-full">Docker</span>
-                        <span class="px-3 py-1 bg-slate-100 text-slate-700 text-sm rounded-full">Cloud Computing</span>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- 4. Extracurricular & Leadership (Table Tennis) -->
-        <section id="extracurricular" class="scroll-mt-24 pb-16">
-            <div class="flex items-center space-x-3 mb-10">
-                <div class="p-2.5 bg-blue-100 text-blue-700 rounded-lg">
-                    <i class="fa-solid fa-table-tennis-paddle-ball text-xl"></i>
-                </div>
-                <h2 class="text-3xl font-bold text-slate-900">Extracurricular & Leadership</h2>
-            </div>
-
-            <div class="bg-slate-900 text-white rounded-3xl overflow-hidden shadow-2xl">
-                <div class="flex flex-col md:flex-row">
-                    <!-- Text Content -->
-                    <div class="p-8 md:p-12 md:w-3/5 space-y-6 flex flex-col justify-center">
-                        <div class="inline-flex items-center gap-2 px-3 py-1 bg-blue-500/20 text-blue-300 text-xs font-bold tracking-wider uppercase rounded-full w-fit border border-blue-500/30">
-                            <i class="fa-solid fa-medal"></i> Varsity Athlete
-                        </div>
-                        <h3 class="text-2xl md:text-3xl font-bold leading-tight">
-                            University Varsity Table Tennis Team
-                        </h3>
-                        <p class="text-slate-300 text-base md:text-lg leading-relaxed">
-                            Beyond software engineering, I am a dedicated collegiate table tennis competitor. Participating in high-level tournaments demands rigorous physical training and immense mental discipline.
-                        </p>
-                        <ul class="space-y-3 mt-4 text-slate-300">
-                            <li class="flex items-start gap-3">
-                                <i class="fa-solid fa-check text-blue-400 mt-1"></i>
-                                <span><strong>Rapid Decision-Making:</strong> Processing high-speed information and reacting tactically under extreme pressure.</span>
-                            </li>
-                            <li class="flex items-start gap-3">
-                                <i class="fa-solid fa-check text-blue-400 mt-1"></i>
-                                <span><strong>Strategic Execution:</strong> Analyzing opponents and adjusting game plans dynamically, akin to iterative software debugging and system optimization.</span>
-                            </li>
-                            <li class="flex items-start gap-3">
-                                <i class="fa-solid fa-check text-blue-400 mt-1"></i>
-                                <span><strong>Discipline & Resilience:</strong> Balancing rigorous academic research with elite athletic training schedules.</span>
-                            </li>
-                        </ul>
-                    </div>
-                    <!-- Abstract/Iconic Graphic Area (Replacing image block for self-contained HTML) -->
-                    <div class="bg-gradient-to-br from-blue-900 to-slate-800 md:w-2/5 p-8 flex items-center justify-center border-t md:border-t-0 md:border-l border-slate-700 relative overflow-hidden">
-                        <!-- Background decoration -->
-                        <div class="absolute inset-0 opacity-10" style="background-image: radial-gradient(circle at 2px 2px, white 1px, transparent 0); background-size: 24px 24px;"></div>
-                        <i class="fa-solid fa-trophy text-9xl text-slate-700/50 transform -rotate-12 absolute -right-6 -bottom-6"></i>
-                        <div class="relative z-10 text-center space-y-4">
-                            <div class="w-24 h-24 bg-blue-500/20 rounded-full flex items-center justify-center mx-auto border-2 border-blue-400/50 shadow-[0_0_30px_rgba(59,130,246,0.3)]">
-                                <i class="fa-solid fa-table-tennis-paddle-ball text-4xl text-blue-300"></i>
-                            </div>
-                            <p class="font-medium text-blue-200 tracking-wide">COMPETITIVE DRIVE</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-    </main>
-
-    <!-- Footer -->
-    <footer class="bg-slate-900 text-slate-400 py-10 border-t border-slate-800">
-        <div class="max-w-5xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-6">
-            <p class="text-sm">
-                &copy; <span id="year"></span> Yukai Song. All rights reserved.
+          <div class="text-slate-600 leading-relaxed space-y-4">
+            <p>
+              I build <strong>failure-aware machine learning</strong> for high-stakes healthcare systems.
+              My current focus is <strong>mitigating high-confidence errors</strong> in EEG-based sleep stage classification
+              through <strong>risk-aware routing</strong>, robustness, and failure-mode analysis.
             </p>
-            <div class="flex space-x-6">
-                <a href="https://github.com/ys3493-web" target="_blank" class="hover:text-white transition-colors"><i class="fa-brands fa-github text-xl"></i></a>
-                <a href="https://www.linkedin.com/in/yukai-song-711222208/" target="_blank" class="hover:text-white transition-colors"><i class="fa-brands fa-linkedin text-xl"></i></a>
-            </div>
-        </div>
-    </footer>
+            <p>
+              I am also interested in the longer-term direction of <strong>mechanistic digital twins</strong> and
+              <strong>closed-loop intervention</strong>, connecting trustworthy perception to stable control.
+            </p>
+          </div>
 
-    <!-- Simple script for dynamic year -->
-    <script>
-        document.getElementById('year').textContent = new Date().getFullYear();
-    </script>
+          <div class="flex flex-wrap gap-4 pt-2">
+            <a href="https://github.com/Kevin11Kaikai" target="_blank" rel="noreferrer"
+              class="flex items-center space-x-2 px-5 py-2.5 bg-slate-900 text-white rounded-lg hover:bg-slate-800 transition-all shadow-sm">
+              <i class="fa-brands fa-github text-lg"></i><span>GitHub</span>
+            </a>
+            <a href="https://www.linkedin.com/in/yukai-song-711222208/" target="_blank" rel="noreferrer"
+              class="flex items-center space-x-2 px-5 py-2.5 bg-white border border-slate-200 text-slate-700 rounded-lg hover:bg-slate-50 transition-all shadow-sm">
+              <i class="fa-brands fa-linkedin text-lg text-blue-700"></i><span>LinkedIn</span>
+            </a>
+            <a href="mailto:yus190@pitt.edu"
+              class="flex items-center space-x-2 px-5 py-2.5 bg-white border border-slate-200 text-slate-700 rounded-lg hover:bg-slate-50 transition-all shadow-sm">
+              <i class="fa-solid fa-envelope text-lg text-slate-500"></i><span>Email</span>
+            </a>
+            <a href="assets/Resume_Yukai_Song_Clinical_EEG.pdf" target="_blank"
+              class="flex items-center space-x-2 px-5 py-2.5 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-all shadow-sm">
+              <i class="fa-solid fa-file-arrow-down"></i><span>Download CV</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- Photo with fallback -->
+        <div class="w-56 h-56 md:w-72 md:h-72 shrink-0 relative">
+          <div class="absolute inset-0 rounded-full border-4 border-pitt-gold/30 translate-x-3 translate-y-3"></div>
+          <div class="absolute inset-0 rounded-full bg-slate-200 overflow-hidden border-4 border-white shadow-xl z-10 flex items-center justify-center">
+            <img src="Yukai_Song.jpg" alt="Yukai Song" class="w-full h-full object-cover"
+              onerror="this.style.display='none'; document.getElementById('avatarFallback').style.display='flex';" />
+            <div id="avatarFallback" style="display:none" class="w-full h-full flex items-center justify-center">
+              <i class="fa-solid fa-user text-6xl text-slate-400"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Research -->
+    <section id="research" class="scroll-mt-24">
+      <div class="flex items-center space-x-3 mb-10">
+        <div class="p-2.5 bg-blue-100 text-blue-700 rounded-lg"><i class="fa-solid fa-flask text-xl"></i></div>
+        <h2 class="text-3xl font-bold text-slate-900">Research</h2>
+      </div>
+
+      <div class="grid md:grid-cols-2 gap-6">
+        <div class="bg-white p-6 rounded-2xl border border-slate-100 shadow-sm hover-card-lift">
+          <div class="flex items-start justify-between gap-4">
+            <h3 class="font-bold text-lg text-slate-900">Mitigating High-Confidence Errors in Sleep Stage Classification (EEG)</h3>
+            <span class="text-xs font-semibold text-slate-500 whitespace-nowrap">Dec 2025 – Present</span>
+          </div>
+          <ul class="mt-4 space-y-2 text-slate-600 text-sm leading-relaxed">
+            <li>• Two-stage reliability pipeline (Transformer + feature-based expert) for clinical algorithm hardening.</li>
+            <li>• Risk-aware routing via cross-model disagreement (label mismatch + distributional divergence).</li>
+            <li>• 20-fold LOSO on Sleep-EDF-20: identified 1,923 HCEs; escalated 18.8% while reducing accepted-sample HCE rate to 1.62% (~64.4% reduction).</li>
+          </ul>
+          <div class="mt-4 flex flex-wrap gap-2">
+            <span class="px-3 py-1 bg-blue-50 text-blue-700 text-xs font-semibold rounded-full">EEG</span>
+            <span class="px-3 py-1 bg-slate-100 text-slate-700 text-xs font-semibold rounded-full">Reliability</span>
+            <span class="px-3 py-1 bg-slate-100 text-slate-700 text-xs font-semibold rounded-full">Risk-aware routing</span>
+          </div>
+        </div>
+
+        <div class="bg-white p-6 rounded-2xl border border-slate-100 shadow-sm hover-card-lift">
+          <div class="flex items-start justify-between gap-4">
+            <h3 class="font-bold text-lg text-slate-900">Two-Stage Voting for Suicide Risk Detection on Social Media</h3>
+            <span class="text-xs font-semibold text-slate-500 whitespace-nowrap">Apr 2025 – Present</span>
+          </div>
+          <ul class="mt-4 space-y-2 text-slate-600 text-sm leading-relaxed">
+            <li>• Length-confidence routing using a fine-tuned BERT classifier; filters 67.6% of inputs for cost-efficient uncertainty handling.</li>
+            <li>• Stage-2 ensembles: (i) BERT + LLM agent voting for recall, (ii) ML voting over LLM-extracted psychological features for interpretability.</li>
+            <li>• Strong cross-domain generalization; performance gap &lt;2%.</li>
+          </ul>
+          <div class="mt-4 flex flex-wrap gap-2">
+            <span class="px-3 py-1 bg-blue-50 text-blue-700 text-xs font-semibold rounded-full">NLP</span>
+            <span class="px-3 py-1 bg-slate-100 text-slate-700 text-xs font-semibold rounded-full">BERT</span>
+            <span class="px-3 py-1 bg-slate-100 text-slate-700 text-xs font-semibold rounded-full">Agents</span>
+          </div>
+        </div>
+
+        <div class="bg-white p-6 rounded-2xl border border-slate-100 shadow-sm hover-card-lift md:col-span-2">
+          <div class="flex items-start justify-between gap-4">
+            <h3 class="font-bold text-lg text-slate-900">Control-Aware Neural Network Pruning for Real-Time CPS</h3>
+            <span class="text-xs font-semibold text-slate-500 whitespace-nowrap">Sep 2023 – Jul 2025</span>
+          </div>
+          <ul class="mt-4 space-y-2 text-slate-600 text-sm leading-relaxed">
+            <li>• Modular PyTorch pruning framework for resource-constrained deployment with closed-loop safety constraints.</li>
+            <li>• Up to 148× acceleration while preserving system-level safety guarantees under simulation.</li>
+          </ul>
+          <div class="mt-4 flex flex-wrap gap-2">
+            <span class="px-3 py-1 bg-blue-50 text-blue-700 text-xs font-semibold rounded-full">CPS</span>
+            <span class="px-3 py-1 bg-slate-100 text-slate-700 text-xs font-semibold rounded-full">Safety</span>
+            <span class="px-3 py-1 bg-slate-100 text-slate-700 text-xs font-semibold rounded-full">Pruning</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Publications -->
+    <section id="publications" class="scroll-mt-24">
+      <div class="flex items-center space-x-3 mb-10">
+        <div class="p-2.5 bg-blue-100 text-blue-700 rounded-lg"><i class="fa-solid fa-book text-xl"></i></div>
+        <h2 class="text-3xl font-bold text-slate-900">Selected Publications</h2>
+      </div>
+
+      <div class="bg-white p-6 rounded-2xl border border-slate-100 shadow-sm space-y-4">
+        <div>
+          <p class="font-semibold text-slate-900">Song, Y., et al. <span class="font-normal">Two-Stage Voting for Robust and Efficient Suicide Risk Detection on Social Media.</span></p>
+          <p class="text-sm text-slate-500">Manuscript in preparation (target: EMNLP 2026)</p>
+        </div>
+        <div>
+          <p class="font-semibold text-slate-900">Song, Y., Taylor, W., Ge, Y., et al. <span class="font-normal">Evaluation of deep learning models in contactless human motion detection system for next generation healthcare.</span></p>
+          <p class="text-sm text-slate-500">Scientific Reports (2022)</p>
+        </div>
+        <div>
+          <p class="font-semibold text-slate-900">Song, Y., Taylor, W., Ge, Y., et al. <span class="font-normal">Design and Implementation of a Contactless AI-enabled Human Motion Detection System for Next-Generation Healthcare.</span></p>
+          <p class="text-sm text-slate-500">IEEE SmartIoT (2021) — Best Paper Award</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Education (kept from Gemini but truthful) -->
+    <section id="education" class="scroll-mt-24">
+      <div class="flex items-center space-x-3 mb-10">
+        <div class="p-2.5 bg-blue-100 text-blue-700 rounded-lg"><i class="fa-solid fa-building-columns text-xl"></i></div>
+        <h2 class="text-3xl font-bold text-slate-900">Education</h2>
+      </div>
+
+      <div class="grid md:grid-cols-3 gap-6">
+        <div class="bg-white p-6 rounded-2xl border border-slate-100 shadow-sm hover-card-lift">
+          <h3 class="text-lg font-bold text-slate-900">University of Pittsburgh</h3>
+          <p class="text-sm text-slate-500 mt-1">Ph.D. in Electrical &amp; Computer Engineering (GPA 4.0)</p>
+          <p class="text-sm text-slate-600 mt-3">Aug 2023 – Present</p>
+        </div>
+        <div class="bg-white p-6 rounded-2xl border border-slate-100 shadow-sm hover-card-lift">
+          <h3 class="text-lg font-bold text-slate-900">Columbia University</h3>
+          <p class="text-sm text-slate-500 mt-1">M.S. in Electrical Engineering (GPA 3.96)</p>
+          <p class="text-sm text-slate-600 mt-3">Sep 2021 – Feb 2023</p>
+        </div>
+        <div class="bg-white p-6 rounded-2xl border border-slate-100 shadow-sm hover-card-lift">
+          <h3 class="text-lg font-bold text-slate-900">UESTC (Glasgow College)</h3>
+          <p class="text-sm text-slate-500 mt-1">B.S. in Electronic Information Engineering (Rank 1/257)</p>
+          <p class="text-sm text-slate-600 mt-3">Sep 2017 – Jun 2021</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Skills -->
+    <section id="skills" class="scroll-mt-24">
+      <div class="flex items-center space-x-3 mb-10">
+        <div class="p-2.5 bg-blue-100 text-blue-700 rounded-lg"><i class="fa-solid fa-code text-xl"></i></div>
+        <h2 class="text-3xl font-bold text-slate-900">Skills</h2>
+      </div>
+
+      <div class="grid md:grid-cols-3 gap-6">
+        <div class="bg-white p-6 rounded-2xl border border-slate-100 shadow-sm hover-card-lift">
+          <h3 class="font-bold text-slate-900 mb-3">ML & LLM</h3>
+          <div class="flex flex-wrap gap-2 text-sm">
+            <span class="px-3 py-1 bg-slate-100 rounded-full">PyTorch</span>
+            <span class="px-3 py-1 bg-slate-100 rounded-full">Transformers</span>
+            <span class="px-3 py-1 bg-slate-100 rounded-full">scikit-learn</span>
+            <span class="px-3 py-1 bg-slate-100 rounded-full">LangChain</span>
+          </div>
+        </div>
+        <div class="bg-white p-6 rounded-2xl border border-slate-100 shadow-sm hover-card-lift">
+          <h3 class="font-bold text-slate-900 mb-3">Signal & Reliability</h3>
+          <div class="flex flex-wrap gap-2 text-sm">
+            <span class="px-3 py-1 bg-slate-100 rounded-full">EEG</span>
+            <span class="px-3 py-1 bg-slate-100 rounded-full">Calibration</span>
+            <span class="px-3 py-1 bg-slate-100 rounded-full">Failure-mode analysis</span>
+            <span class="px-3 py-1 bg-slate-100 rounded-full">Safety metrics</span>
+          </div>
+        </div>
+        <div class="bg-white p-6 rounded-2xl border border-slate-100 shadow-sm hover-card-lift">
+          <h3 class="font-bold text-slate-900 mb-3">Engineering</h3>
+          <div class="flex flex-wrap gap-2 text-sm">
+            <span class="px-3 py-1 bg-slate-100 rounded-full">Python</span>
+            <span class="px-3 py-1 bg-slate-100 rounded-full">C/C++</span>
+            <span class="px-3 py-1 bg-slate-100 rounded-full">Docker</span>
+            <span class="px-3 py-1 bg-slate-100 rounded-full">Git</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Beyond Research (truthful) -->
+    <section id="extracurricular" class="scroll-mt-24 pb-10">
+      <div class="flex items-center space-x-3 mb-10">
+        <div class="p-2.5 bg-blue-100 text-blue-700 rounded-lg"><i class="fa-solid fa-table-tennis-paddle-ball text-xl"></i></div>
+        <h2 class="text-3xl font-bold text-slate-900">Beyond Research</h2>
+      </div>
+
+      <div class="bg-white p-6 rounded-2xl border border-slate-100 shadow-sm hover-card-lift">
+        <h3 class="text-lg font-bold text-slate-900">Table Tennis & AI Coaching</h3>
+        <p class="text-slate-600 mt-3 leading-relaxed">
+          I train and compete in table tennis at the club level, and I’m building a <strong>table tennis AI coach</strong>
+          (computer vision + LLM-assisted feedback) to turn training data into actionable technique suggestions.
+        </p>
+        <p class="text-slate-600 mt-2 leading-relaxed">
+          This hobby mirrors my research style: disciplined iteration, error analysis, and feedback loops.
+        </p>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="bg-slate-900 text-slate-400 py-10 border-t border-slate-800">
+    <div class="max-w-5xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-6">
+      <p class="text-sm">&copy; <span id="year"></span> Yukai Song. All rights reserved.</p>
+      <div class="flex space-x-6">
+        <a href="https://github.com/Kevin11Kaikai" target="_blank" class="hover:text-white transition-colors"><i class="fa-brands fa-github text-xl"></i></a>
+        <a href="https://www.linkedin.com/in/yukai-song-711222208/" target="_blank" class="hover:text-white transition-colors"><i class="fa-brands fa-linkedin text-xl"></i></a>
+      </div>
+    </div>
+  </footer>
+
+  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
 </body>
 </html>
