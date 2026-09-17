@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="640" height="400" viewBox="0 0 640 400" role="img" aria-labelledby="title desc">
+<title id="title">Failure-aware EEG inference</title><desc id="desc">Two experts evaluate EEG signals. Cross-model disagreement informs acceptance or escalation.</desc>
+<defs><marker id="arrow" viewBox="0 0 8 8" refX="7" refY="4" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0 0L8 4L0 8Z" fill="#7e9f8e"/></marker></defs>
+<g font-family="Arial, sans-serif">
+<g fill="none" stroke="#7e9f8e" stroke-width="2" marker-end="url(#arrow)">
+<path d="M149 198H173V112H198"/><path d="M173 198V280H198"/>
+<path d="M379 112H410V194H436"/><path d="M379 280H410V206H436"/>
+<path d="M520 161V110"/><path d="M520 231V294"/></g>
+<rect x="32" y="155" width="117" height="88" rx="9" fill="#fff" stroke="#becfc0"/>
+<text x="91" y="182" text-anchor="middle" fill="#325d50" font-size="19">EEG signal</text>
+<path d="M47 215H59L64 207L69 225L77 197L83 217L92 211L99 216H133" stroke="#427d6b" stroke-width="2.5" fill="none"/>
+<g fill="#fff" stroke="#becfc0"><rect x="198" y="77" width="181" height="71" rx="9"/><rect x="198" y="245" width="181" height="71" rx="9"/></g>
+<g text-anchor="middle"><text x="288" y="104" fill="#527465" font-size="13" letter-spacing="1">EXPERT 01</text><text x="288" y="129" fill="#264e43" font-size="21">Transformer</text><text x="288" y="272" fill="#527465" font-size="13" letter-spacing="1">EXPERT 02</text><text x="288" y="297" fill="#264e43" font-size="20">Feature-based</text></g>
+<rect x="436" y="161" width="168" height="70" rx="10" fill="#285d50"/>
+<text x="520" y="190" text-anchor="middle" fill="#fff" font-size="20">Compare</text><text x="520" y="214" text-anchor="middle" fill="#d4e4d9" font-size="17">disagreement</text>
+<rect x="448" y="61" width="145" height="48" rx="24" fill="#dae8d9" stroke="#b5cdb6"/><text x="520" y="91" text-anchor="middle" fill="#335a3f" font-size="19">Accept</text>
+<rect x="448" y="296" width="145" height="48" rx="24" fill="#f3e9d5" stroke="#dac8a1"/><text x="520" y="326" text-anchor="middle" fill="#775a2a" font-size="19">Escalate</text>
+<text x="32" y="374" fill="#657f6e" font-size="14" letter-spacing=".5">TWO EXPERTS. ONE RISK-AWARE ROUTING DECISION.</text></g></svg>

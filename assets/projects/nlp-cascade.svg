@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="640" height="340" viewBox="0 0 640 340" role="img" aria-labelledby="title desc">
+<title id="title">Cascaded NLP inference</title><desc id="desc">A BERT classifier filters clear cases. Ambiguous cases proceed to LLM reasoning and ensemble voting.</desc>
+<defs><marker id="arrow" viewBox="0 0 8 8" refX="7" refY="4" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0 0L8 4L0 8Z" fill="#8396b5"/></marker></defs>
+<g font-family="Arial, sans-serif">
+<g fill="none" stroke="#8396b5" stroke-width="2" marker-end="url(#arrow)"><path d="M171 150H227"/><path d="M387 150H418V101H453"/><path d="M418 150V246H453"/></g>
+<rect x="37" y="112" width="134" height="77" rx="9" fill="#fff" stroke="#c6d2e3"/>
+<g stroke="#8497b6" stroke-width="3" stroke-linecap="round"><path d="M58 132H103M58 143H148M58 154H135"/></g>
+<text x="104" y="177" text-anchor="middle" fill="#3e557a" font-size="17">Text input</text>
+<text x="307" y="87" text-anchor="middle" fill="#6a7d9d" font-size="14">Confidence + length</text>
+<rect x="227" y="112" width="160" height="77" rx="9" fill="#385e8c"/>
+<text x="307" y="144" text-anchor="middle" fill="#fff" font-size="26">BERT</text><text x="307" y="169" text-anchor="middle" fill="#d7e3f3" font-size="17">First-stage filter</text>
+<rect x="453" y="64" width="150" height="76" rx="9" fill="#e4ecdf" stroke="#c4d3be"/>
+<text x="528" y="95" text-anchor="middle" fill="#465e3f" font-size="20">Clear cases</text><text x="528" y="120" text-anchor="middle" fill="#627758" font-size="17">Early exit</text>
+<rect x="453" y="207" width="150" height="79" rx="9" fill="#fff" stroke="#b8c9e1"/>
+<text x="528" y="236" text-anchor="middle" fill="#385c88" font-size="21">LLM + voting</text><text x="528" y="261" text-anchor="middle" fill="#657b9c" font-size="16">Ambiguous cases</text>
+<text x="37" y="319" fill="#687d9e" font-size="14" letter-spacing=".5">RESERVE DEEPER REASONING FOR HARDER CASES.</text></g></svg>

@@ -10,7 +10,8 @@ From this directory, run `python -m http.server 8765 --bind 127.0.0.1`, then ope
 
 - `index.html`: biography, projects, education, skills, publications, contact information, and search/social metadata.
 - `assets/styles.css`: responsive styles, keyboard focus indicators, reduced-motion support, and print styles.
-- `assets/site.js`: accessible mobile navigation and current-section highlighting. The page content and native project disclosures work without JavaScript.
+- `assets/site.js`: accessible mobile navigation, current-section highlighting, and project filters. Following a project link restores that project if a filter has hidden it. The page content, navigation, and native project disclosures work without JavaScript.
+- `assets/projects/*.svg`: three original, accessible diagrams explaining the EEG, NLP, and pruning pipelines. These are conceptual illustrations, not empirical plots or product screenshots.
 - `assets/Resume_Yukai_Song_Clinical_EEG.pdf`: existing résumé, unchanged. Replace this file to update the download.
 - `Yukai_Song.jpg`: existing portrait, unchanged.
 - `assets/favicon.svg`, `robots.txt`, `sitemap.xml`: site icon and crawler metadata.
@@ -26,6 +27,12 @@ The rewrite preserves the original website's experience, numerical research resu
 - Published paper metadata and links were checked against [Scientific Reports](https://www.nature.com/articles/s41598-022-25403-y) and the [University of Glasgow repository](https://eprints.gla.ac.uk/246949/).
 
 The research experiments themselves were not rerun as part of this website update.
+
+## Design reference
+
+The user supplied the [Varad Bhogayata portfolio template](https://github.com/varadbhogayata/varadbhogayata.github.io). This version draws on its persistent section navigation, visual project cards, progressive disclosure, and grouped skills. The implementation and SVG illustrations are original; no template code, personal content, images, tracking IDs, or vendor scripts were copied. The existing blue and cream palette, verified project results, publications, portrait, and résumé are retained.
+
+At widths of 1100px or less, the sidebar becomes a compact header and expandable menu. Project filters use native buttons with pressed states and a live result count. Reduced-motion preferences are respected; print styles include all projects even when a filter is active.
 
 ## GitHub Pages
 

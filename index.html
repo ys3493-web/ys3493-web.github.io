@@ -27,81 +27,64 @@
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
   <header class="site-header">
-    <div class="container header-inner">
-      <a class="wordmark" href="#about" aria-label="Yukai Song, home"><span class="monogram" aria-hidden="true">YS<span>.</span></span><span>Yukai Song</span></a>
+    <div class="header-inner">
+      <a class="wordmark" href="#about" aria-label="Yukai Song, home"><span class="monogram" aria-hidden="true">YS<span>.</span></span><span class="wordmark-name">Yukai Song</span></a>
+      <p class="rail-description">Machine learning researcher<br>Ph.D. Candidate · Pittsburgh</p>
       <button class="menu-toggle" id="menu-toggle" aria-expanded="false" aria-controls="primary-navigation" hidden><span>Menu</span><span class="menu-icon" aria-hidden="true"></span></button>
       <nav class="primary-nav" id="primary-navigation" aria-label="Main navigation">
-        <a href="#research">Selected work</a>
-        <a href="#publications">Publications</a>
-        <a href="#education">Background</a>
-        <a href="#contact">Contact</a>
-        <a class="nav-resume" href="assets/Resume_Yukai_Song_Clinical_EEG.pdf" download>Résumé <span aria-hidden="true">↓</span></a>
+        <a href="#about" aria-current="location"><span class="nav-index" aria-hidden="true">00</span>Overview</a>
+        <a href="#research"><span class="nav-index" aria-hidden="true">01</span>Selected work</a>
+        <a href="#publications"><span class="nav-index" aria-hidden="true">02</span>Publications</a>
+        <a href="#skills"><span class="nav-index" aria-hidden="true">03</span>Technical toolkit</a>
+        <a href="#education"><span class="nav-index" aria-hidden="true">04</span>Background</a>
+        <a href="#contact"><span class="nav-index" aria-hidden="true">05</span>Contact</a>
+        <a class="nav-resume" href="assets/Resume_Yukai_Song_Clinical_EEG.pdf" download>Download résumé <span aria-hidden="true">↓</span></a>
       </nav>
+      <div class="rail-footer"><span class="rail-location"><span class="status-dot" aria-hidden="true"></span>Pittsburgh, PA</span><div class="social-links"><a href="https://github.com/Kevin11Kaikai" target="_blank" rel="noopener noreferrer">GitHub ↗</a><a href="https://www.linkedin.com/in/yukai-song-711222208/" target="_blank" rel="noopener noreferrer">LinkedIn ↗</a></div><p>Research. Engineering.<br>Reliability.</p></div>
     </div>
   </header>
   <main id="main" tabindex="-1">
-    <section class="hero container" id="about" aria-labelledby="hero-title">
-      <div class="hero-copy">
-        <p class="eyebrow"><span class="status-dot" aria-hidden="true"></span> Machine learning researcher</p>
-        <h1 id="hero-title">Yukai Song<span class="accent">.</span></h1>
-        <p class="hero-statement">Building machine learning<br class="desktop-break"> you can <em>trust.</em></p>
-        <p class="hero-description">I develop failure-aware models for healthcare and safety-critical systems—connecting rigorous evaluation with practical, efficient ML pipelines.</p>
-        <p class="affiliation">Ph.D. Candidate · Electrical &amp; Computer Engineering<br><strong>University of Pittsburgh</strong></p>
-        <div class="hero-actions">
-          <a class="button button-primary" href="assets/Resume_Yukai_Song_Clinical_EEG.pdf" download>Download résumé <span aria-hidden="true">↓</span></a>
-          <a class="button button-outline" href="#research">Explore my work <span aria-hidden="true">↗</span></a>
+    <section class="overview" id="about" aria-labelledby="hero-title" tabindex="-1">
+      <div class="container page-caption"><span>Research × engineering</span><span>Personal portfolio / 2026</span></div>
+      <div class="hero container">
+        <div class="hero-copy">
+          <p class="eyebrow"><span class="status-dot" aria-hidden="true"></span> Hi, I’m</p>
+          <h1 id="hero-title">Yukai Song<span class="accent">.</span></h1>
+          <p class="hero-statement">Building machine learning<br>you can <em>trust.</em></p>
+          <p class="hero-description">I develop failure-aware models for healthcare and safety-critical systems—connecting rigorous evaluation with practical, efficient ML pipelines.</p>
+          <p class="affiliation">Ph.D. Candidate · Electrical &amp; Computer Engineering<br><strong>University of Pittsburgh</strong></p>
+          <div class="hero-actions"><a class="button button-primary" href="assets/Resume_Yukai_Song_Clinical_EEG.pdf" download>Download résumé <span aria-hidden="true">↓</span></a><a class="button button-outline" href="#research">Explore my work <span aria-hidden="true">↗</span></a></div>
+          <p class="opportunity-note">Exploring opportunities in ML research &amp; engineering.</p>
+          <div class="social-links" role="group" aria-label="Professional profiles"><a href="https://github.com/Kevin11Kaikai" target="_blank" rel="noopener noreferrer">GitHub <span aria-hidden="true">↗</span></a><a href="https://www.linkedin.com/in/yukai-song-711222208/" target="_blank" rel="noopener noreferrer">LinkedIn <span aria-hidden="true">↗</span></a><a href="mailto:yus190@pitt.edu">Email <span aria-hidden="true">↗</span></a></div>
         </div>
-        <div class="social-links" role="group" aria-label="Professional profiles">
-          <a href="https://github.com/Kevin11Kaikai" target="_blank" rel="noopener noreferrer">GitHub <span aria-hidden="true">↗</span></a>
-          <a href="https://www.linkedin.com/in/yukai-song-711222208/" target="_blank" rel="noopener noreferrer">LinkedIn <span aria-hidden="true">↗</span></a>
-          <a href="mailto:yus190@pitt.edu">Email <span aria-hidden="true">↗</span></a>
-        </div>
+        <div class="hero-aside"><figure class="portrait"><img src="Yukai_Song.jpg" alt="Yukai Song" width="400" height="500" fetchpriority="high" decoding="async"><figcaption><span>Yukai Song</span><span>Research &amp; engineering</span></figcaption></figure><div class="focus-note"><span class="eyebrow">The question behind my work</span><p>When is confidence<br><strong>not enough?</strong></p><a href="#eeg-project">Explore failure-aware ML <span aria-hidden="true">↗</span></a></div></div>
       </div>
-      <div class="hero-aside">
-        <figure class="portrait">
-          <img src="Yukai_Song.jpg" alt="Yukai Song" width="400" height="500" fetchpriority="high" decoding="async">
-          <figcaption><span>Pittsburgh, Pennsylvania</span><span>Research &amp; engineering</span></figcaption>
-        </figure>
-        <div class="focus-note"><span class="eyebrow">The question behind my work</span><p>When is confidence<br><strong>not enough?</strong></p><a href="#eeg-project">Explore failure-aware ML <span aria-hidden="true">↗</span></a></div>
+      <div class="container impact-strip" role="group" aria-label="Selected research results">
+        <a href="#eeg-project" class="impact-item"><span class="impact-kicker">01 / Healthcare AI</span><span class="impact-value">64.4<span>%</span></span><span class="impact-label">Relative reduction in accepted-sample high-confidence errors</span><span class="impact-context">Sleep-EDF-20 evaluation <span aria-hidden="true">↗</span></span></a>
+        <a href="#nlp-project" class="impact-item"><span class="impact-kicker">02 / Language AI</span><span class="impact-value">67.6<span>%</span></span><span class="impact-label">Of inputs filtered by a first-stage BERT classifier</span><span class="impact-context">Cascaded inference <span aria-hidden="true">↗</span></span></a>
+        <a href="#pruning-project" class="impact-item"><span class="impact-kicker">03 / ML systems</span><span class="impact-value"><small>up to</small> 148<span>×</span></span><span class="impact-label">Acceleration with control-aware neural network pruning</span><span class="impact-context">Simulation-based evaluation <span aria-hidden="true">↗</span></span></a>
       </div>
     </section>
-    <div class="container impact-strip" role="group" aria-label="Selected research results">
-      <a href="#eeg-project" class="impact-item"><span class="impact-value">64.4<span>%</span></span><span class="impact-label">Relative reduction in accepted-sample <br>high-confidence errors</span><span class="impact-context">EEG · Sleep-EDF-20 evaluation <span aria-hidden="true">↗</span></span></a>
-      <a href="#nlp-project" class="impact-item"><span class="impact-value">67.6<span>%</span></span><span class="impact-label">Of inputs filtered by a <br>first-stage BERT classifier</span><span class="impact-context">NLP · Cascaded inference <span aria-hidden="true">↗</span></span></a>
-      <a href="#pruning-project" class="impact-item"><span class="impact-value"><small>up to</small> 148<span>×</span></span><span class="impact-label">Acceleration with control-aware <br>neural network pruning</span><span class="impact-context">CPS · Simulation-based evaluation <span aria-hidden="true">↗</span></span></a>
-    </div>
-    <section class="section container" id="research" aria-labelledby="research-title">
-      <div class="section-heading"><div><p class="eyebrow">01 / Selected work</p><h2 id="research-title">Research with an<br><em>engineering mindset.</em></h2></div><p>From identifying failure modes to building efficient inference systems. Three projects at the intersection of reliability, healthcare, and deployment.</p></div>
-      <article class="project project-featured" id="eeg-project" aria-labelledby="eeg-title">
-        <div class="project-main">
-          <div class="project-meta"><span>01 / Reliable healthcare ML</span><span>Dec 2025 – Present</span></div>
-          <h3 id="eeg-title">Catching confident errors<br>in EEG sleep staging.</h3>
-          <p>High model confidence does not always mean a correct prediction. I build a two-stage pipeline that uses disagreement between experts to identify and reroute high-risk EEG samples.</p>
-          <ul class="tags" aria-label="Project methods"><li>EEG</li><li>Transformers</li><li>Risk-aware routing</li><li>Failure analysis</li></ul>
-          <details><summary>Method &amp; evaluation <span aria-hidden="true">+</span></summary><div class="details-body"><ul><li>Combine a Transformer with a feature-based expert for failure-aware inference.</li><li>Use label mismatch and distributional divergence as cross-model disagreement signals.</li><li>Evaluate with 20-fold leave-one-subject-out validation on Sleep-EDF-20; identify 1,923 high-confidence errors (HCEs).</li><li>Escalate 18.8% of samples and reduce the HCE rate among accepted samples to 1.62%, a relative reduction of approximately 64.4%.</li></ul><p class="evaluation-note">The reduction refers to accepted samples after routing, not an overall accuracy gain across all samples.</p></div></details>
-        </div>
-        <aside class="project-result" aria-label="EEG evaluation result"><span class="eyebrow">Measured outcome</span><p class="result-value">1.62<span>%</span></p><p class="result-label">High-confidence error rate<br>among accepted samples</p><div class="result-divider"></div><dl><div><dt>Relative HCE reduction</dt><dd>≈64.4%</dd></div><div><dt>Samples escalated</dt><dd>18.8%</dd></div><div><dt>Evaluation</dt><dd>20-fold LOSO</dd></div></dl><span class="result-footnote">Sleep-EDF-20 · Research evaluation</span></aside>
-      </article>
-      <div class="project-grid">
-        <article class="project project-secondary" id="nlp-project" aria-labelledby="nlp-title">
-          <div class="project-meta"><span>02 / Efficient NLP</span><span>Apr 2025 – Present</span></div>
-          <h3 id="nlp-title">Smarter routing for<br>suicide risk detection.</h3>
-          <p>A cascaded system for social media analysis: handle explicit cases with a lightweight classifier and reserve more intensive reasoning for ambiguous content.</p>
-          <div class="inline-result"><strong>67.6%</strong><span>of inputs filtered at the BERT stage</span></div>
-          <ul class="tags" aria-label="Project methods"><li>BERT</li><li>LLM agents</li><li>Ensembles</li></ul>
-          <details><summary>Method &amp; evaluation <span aria-hidden="true">+</span></summary><div class="details-body"><ul><li>Route inputs using text length and the confidence of a fine-tuned BERT classifier.</li><li>Compare BERT + LLM agent voting for recall with ML voting over LLM-extracted psychological features for interpretability.</li><li>Reduce the reported cross-domain performance gap to less than 2%.</li></ul><p class="evaluation-note">Related manuscript in preparation. <a href="#manuscript">See publication status</a>.</p></div></details>
+    <section class="section container" id="research" aria-labelledby="research-title" tabindex="-1">
+      <div class="section-heading"><div><p class="eyebrow">01 / Selected work</p><h2 id="research-title">From a research question<br>to an <em>engineered solution.</em></h2></div><p>Three projects. One thread: understanding where models fail, and building systems that respond.</p></div>
+      <div class="project-toolbar"><div class="project-filters" role="group" aria-label="Filter projects by research area" hidden><button type="button" data-filter="all" aria-pressed="true" aria-controls="project-list">All work <span>3</span></button><button type="button" data-filter="healthcare" aria-pressed="false" aria-controls="project-list">Healthcare AI</button><button type="button" data-filter="language" aria-pressed="false" aria-controls="project-list">Language AI</button><button type="button" data-filter="systems" aria-pressed="false" aria-controls="project-list">ML systems</button></div><p class="project-count" id="project-count" role="status" aria-live="polite" aria-atomic="true">Showing all 3 projects</p></div>
+      <div class="projects" id="project-list">
+        <article class="project project-featured" id="eeg-project" data-area="healthcare" aria-labelledby="eeg-title" tabindex="-1">
+          <div class="project-visual visual-eeg"><div class="visual-label"><span>01 / Failure-aware inference</span><span>EEG</span></div><img src="assets/projects/eeg-routing.svg" alt="EEG signals are assessed by a Transformer and a feature-based expert; disagreement informs whether samples are accepted or escalated." width="640" height="400" loading="lazy" decoding="async"><p class="diagram-note">Pipeline schematic · research evaluation</p><div class="visual-outcome"><div><strong>1.62<span>%</span></strong><p>HCE rate among<br>accepted samples</p></div><div><strong>18.8<span>%</span></strong><p>Samples escalated<br>for further processing</p></div></div></div>
+          <div class="project-content"><div class="project-meta"><span>Reliable healthcare ML</span><span>Dec 2025 – Present</span></div><h3 id="eeg-title">Catching confident errors<br>in EEG sleep staging.</h3><dl class="project-story"><div><dt>The challenge</dt><dd>A confident prediction can still be wrong. In healthcare, those errors deserve a closer look.</dd></div><div><dt>My approach</dt><dd>I combine two experts and use their disagreement to identify and reroute high-risk EEG samples.</dd></div></dl><div class="inline-result"><strong>≈64.4%</strong><span>relative reduction in accepted-sample high-confidence errors</span></div><ul class="tags" aria-label="Project methods"><li>EEG</li><li>Transformers</li><li>Risk-aware routing</li><li>Failure analysis</li></ul><details><summary>Methods &amp; evaluation <span aria-hidden="true">+</span></summary><div class="details-body"><ul><li>Combine a Transformer with a feature-based expert for failure-aware inference.</li><li>Use label mismatch and distributional divergence as cross-model disagreement signals.</li><li>Evaluate with 20-fold leave-one-subject-out validation on Sleep-EDF-20; identify 1,923 high-confidence errors (HCEs).</li><li>Escalate 18.8% of samples and reduce the HCE rate among accepted samples to 1.62%, a relative reduction of approximately 64.4%.</li></ul><p class="evaluation-note">The reduction refers to accepted samples after routing, not an overall accuracy gain across all samples. These are research evaluation results.</p></div></details></div>
         </article>
-        <article class="project project-secondary" id="pruning-project" aria-labelledby="pruning-title">
-          <div class="project-meta"><span>03 / ML systems</span><span>Sep 2023 – Jul 2025</span></div>
-          <h3 id="pruning-title">Faster networks.<br>System-level constraints.</h3>
-          <p>Control-aware neural network pruning for real-time cyber-physical systems, balancing computational efficiency with closed-loop safety requirements.</p>
-          <div class="inline-result"><strong><small>up to</small> 148×</strong><span>acceleration in simulation-based evaluation</span></div>
-          <ul class="tags" aria-label="Project methods"><li>PyTorch</li><li>Model pruning</li><li>Control systems</li></ul>
-          <details><summary>Method &amp; evaluation <span aria-hidden="true">+</span></summary><div class="details-body"><ul><li>Build a modular PyTorch pruning pipeline for resource-constrained deployment.</li><li>Integrate closed-loop safety constraints into the optimization objective.</li><li>Achieve up to 148× acceleration while preserving system-level safety guarantees under simulation.</li></ul></div></details>
+        <article class="project project-secondary" id="nlp-project" data-area="language" aria-labelledby="nlp-title" tabindex="-1">
+          <div class="project-visual visual-nlp"><div class="visual-label"><span>02 / Cascaded inference</span><span>NLP</span></div><img src="assets/projects/nlp-cascade.svg" alt="Social media text enters a BERT classifier. Clear cases exit early; ambiguous cases proceed to LLM reasoning and ensemble voting." width="640" height="340" loading="lazy" decoding="async"><p class="diagram-note">System schematic</p></div>
+          <div class="project-content"><div class="project-meta"><span>Efficient NLP</span><span>Apr 2025 – Present</span></div><h3 id="nlp-title">Smarter routing for<br>suicide risk detection.</h3><p>A cascaded system for social media analysis: handle explicit cases with a lightweight classifier and reserve more intensive reasoning for ambiguous content.</p><div class="inline-result"><strong>67.6%</strong><span>of inputs filtered at the BERT stage</span></div><ul class="tags" aria-label="Project methods"><li>BERT</li><li>LLM agents</li><li>Ensembles</li></ul><details><summary>Methods &amp; evaluation <span aria-hidden="true">+</span></summary><div class="details-body"><ul><li>Route inputs using text length and the confidence of a fine-tuned BERT classifier.</li><li>Compare BERT + LLM agent voting for recall with ML voting over LLM-extracted psychological features for interpretability.</li><li>Reduce the reported cross-domain performance gap to less than 2%.</li></ul><p class="evaluation-note">67.6% is the fraction filtered at the first stage, not a measured reduction in total latency. Related manuscript in preparation: <a href="#manuscript">see publication status</a>.</p></div></details></div>
+        </article>
+        <article class="project project-secondary" id="pruning-project" data-area="systems" aria-labelledby="pruning-title" tabindex="-1">
+          <div class="project-visual visual-pruning"><div class="visual-label"><span>03 / Control-aware pruning</span><span>CPS</span></div><img src="assets/projects/control-pruning.svg" alt="A dense neural network is pruned into a sparse network, with closed-loop safety constraints included in the optimization." width="640" height="340" loading="lazy" decoding="async"><p class="diagram-note">Conceptual network · simulation-based evaluation</p></div>
+          <div class="project-content"><div class="project-meta"><span>ML systems</span><span>Sep 2023 – Jul 2025</span></div><h3 id="pruning-title">Faster networks.<br>System-level constraints.</h3><p>Control-aware neural network pruning for real-time cyber-physical systems, balancing computational efficiency with closed-loop safety requirements.</p><div class="inline-result"><strong><small>up to</small> 148×</strong><span>acceleration in simulation-based evaluation</span></div><ul class="tags" aria-label="Project methods"><li>PyTorch</li><li>Model pruning</li><li>Control systems</li></ul><details><summary>Methods &amp; evaluation <span aria-hidden="true">+</span></summary><div class="details-body"><ul><li>Build a modular PyTorch pruning pipeline for resource-constrained deployment.</li><li>Integrate closed-loop safety constraints into the optimization objective.</li><li>Achieve up to 148× acceleration while preserving system-level safety guarantees under simulation.</li></ul></div></details></div>
         </article>
       </div>
+      <div class="project-note"><span class="status-dot" aria-hidden="true"></span><p>Interested in the details behind a result? <a href="mailto:yus190@pitt.edu?subject=Your%20machine%20learning%20research">Let’s talk about the work <span aria-hidden="true">↗</span></a></p></div>
     </section>
-    <section class="publication-band" id="publications" aria-labelledby="publications-title"><div class="container section">
+    <section class="publication-band" id="publications" aria-labelledby="publications-title" tabindex="-1"><div class="container section">
       <div class="section-heading"><div><p class="eyebrow">02 / Publications</p><h2 id="publications-title">Ideas, in print.</h2></div><p>Peer-reviewed work in contactless healthcare sensing, alongside ongoing research in reliable NLP.</p></div>
       <ol class="publication-list">
         <li class="publication"><div class="publication-year">2022<span>Journal article</span></div><div><h3><a href="https://doi.org/10.1038/s41598-022-25403-y" target="_blank" rel="noopener noreferrer">Evaluation of deep learning models in contactless human motion detection system for next generation healthcare <span aria-hidden="true">↗</span></a></h3><p><strong>Yukai Song</strong>, William Taylor, Yao Ge, Muhammad Usman, Muhammad Ali Imran &amp; Qammer H. Abbasi</p><p class="publication-venue">Scientific Reports · Volume 12, Article 21592</p></div><a class="text-link publication-action" href="https://doi.org/10.1038/s41598-022-25403-y" target="_blank" rel="noopener noreferrer" aria-label="Read the 2022 Scientific Reports paper">Read paper <span aria-hidden="true">↗</span></a></li>
@@ -109,19 +92,25 @@
         <li class="publication" id="manuscript"><div class="publication-year publication-progress">In progress<span>Manuscript</span></div><div><h3>Two-Stage Voting for Robust and Efficient Suicide Risk Detection on Social Media</h3><p><strong>Yukai Song</strong>, et al.</p><p class="publication-venue">In preparation · Target venue: EMNLP 2026</p></div><a class="text-link publication-action" href="#nlp-project">Related project <span aria-hidden="true">↗</span></a></li>
       </ol>
     </div></section>
-    <section class="section container background" id="education" aria-labelledby="background-title">
-      <div class="section-heading"><div><p class="eyebrow">03 / Background</p><h2 id="background-title">A foundation in<br><em>research &amp; building.</em></h2></div><p>Electrical engineering training, hands-on ML development, and a focus on how models behave as part of a larger system.</p></div>
-      <div class="background-grid">
-        <div class="education-list" role="group" aria-label="Education">
-          <article class="education-item"><p class="education-date">2023 – Present</p><h3>University of Pittsburgh</h3><p>Ph.D. in Electrical &amp; Computer Engineering</p><p class="education-detail">GPA 4.0 · Advisor: Prof. Jingtong Hu<br>Co-advisor: Prof. Zhi-Hong Mao</p></article>
-          <article class="education-item"><p class="education-date">2021 – 2023</p><h3>Columbia University</h3><p>M.S. in Electrical Engineering</p><p class="education-detail">GPA 3.96</p></article>
-          <article class="education-item"><p class="education-date">2017 – 2021</p><h3>UESTC · Glasgow College</h3><p>B.S. in Electronic Information Engineering</p><p class="education-detail">GPA 3.92 · Rank 1/257 · First Class Honours<br>National Scholarship (Top 2%)</p></article>
-        </div>
-        <div class="skills-panel" id="skills"><p class="eyebrow">Technical toolkit</p><div class="skill-group"><h3>Machine learning &amp; language</h3><p>PyTorch · TensorFlow · Transformers · Hugging Face · LangChain · OpenAI API</p></div><div class="skill-group"><h3>Reliability &amp; signals</h3><p>EEG · Calibration · Failure-mode analysis · Safety / alignment metrics · Model pruning</p></div><div class="skill-group"><h3>Engineering &amp; infrastructure</h3><p>Python · C/C++ · CUDA · Docker · Git · Linux · AWS</p></div><div class="next-direction"><span class="eyebrow">Looking ahead</span><p>Mechanistic digital twins and closed-loop intervention—connecting trustworthy perception to stable control.</p></div></div>
+    <section class="section container" id="skills" aria-labelledby="skills-title" tabindex="-1">
+      <div class="section-heading"><div><p class="eyebrow">03 / Technical toolkit</p><h2 id="skills-title">The tools.<br><em>The work behind them.</em></h2></div><p>From signal analysis to inference pipelines. Explore the projects where these capabilities come together.</p></div>
+      <div class="skills-grid">
+        <article class="skill-card"><span class="skill-mark" aria-hidden="true">{ }</span><h3>Machine learning <br>&amp; language</h3><ul class="skill-chips" aria-label="Machine learning tools"><li>PyTorch</li><li>TensorFlow</li><li>Transformers</li><li>Hugging Face</li><li>LangChain</li><li>OpenAI API</li></ul><a class="text-link" href="#nlp-project">Explore language AI <span aria-hidden="true">↗</span></a></article>
+        <article class="skill-card"><span class="skill-mark signal-mark" aria-hidden="true">∿</span><h3>Reliability <br>&amp; signals</h3><ul class="skill-chips" aria-label="Reliability methods"><li>EEG</li><li>Calibration</li><li>Failure-mode analysis</li><li>Safety / alignment metrics</li><li>Model pruning</li></ul><a class="text-link" href="#eeg-project">Explore failure-aware ML <span aria-hidden="true">↗</span></a></article>
+        <article class="skill-card"><span class="skill-mark" aria-hidden="true">&gt;_</span><h3>Engineering <br>&amp; infrastructure</h3><ul class="skill-chips" aria-label="Engineering tools"><li>Python</li><li>C/C++</li><li>CUDA</li><li>Docker</li><li>Git</li><li>Linux</li><li>AWS</li></ul><a class="text-link" href="#pruning-project">Explore efficient systems <span aria-hidden="true">↗</span></a></article>
       </div>
-      <aside class="beyond" id="beyond" aria-labelledby="beyond-title"><span class="beyond-mark" aria-hidden="true">↗</span><div><h3 id="beyond-title">Off the clock. Still iterating.</h3><p>I train and compete in club-level table tennis. I’m also building an AI coaching tool that combines computer vision and LLM-assisted feedback to turn training observations into actionable technique suggestions.</p></div><span class="beyond-label">Table tennis × AI</span></aside>
+      <div class="research-direction"><p class="eyebrow">Looking ahead</p><p>Mechanistic digital twins and closed-loop intervention—connecting trustworthy perception to stable control.</p></div>
     </section>
-    <section class="contact-band" id="contact" aria-labelledby="contact-title"><div class="container contact-inner"><div><p class="eyebrow">04 / Get in touch</p><h2 id="contact-title">Let’s build more<br><em>reliable ML.</em></h2><p>Interested in my work or a potential research or engineering opportunity? I’d be happy to connect.</p></div><div class="contact-actions"><a class="contact-email" href="mailto:yus190@pitt.edu">yus190@pitt.edu <span aria-hidden="true">↗</span></a><a class="button button-light" href="assets/Resume_Yukai_Song_Clinical_EEG.pdf" download>Download résumé <span aria-hidden="true">↓</span></a><div class="social-links"><a href="https://www.linkedin.com/in/yukai-song-711222208/" target="_blank" rel="noopener noreferrer">LinkedIn <span aria-hidden="true">↗</span></a><a href="https://github.com/Kevin11Kaikai" target="_blank" rel="noopener noreferrer">GitHub <span aria-hidden="true">↗</span></a></div></div></div></section>
+    <section class="background-band" id="education" aria-labelledby="background-title" tabindex="-1"><div class="section container">
+      <div class="section-heading"><div><p class="eyebrow">04 / Background</p><h2 id="background-title">A foundation in<br><em>research &amp; building.</em></h2></div><p>Electrical engineering training, hands-on ML development, and a focus on how models behave as part of a larger system.</p></div>
+      <div class="education-list" role="group" aria-label="Education">
+        <article class="education-item"><p class="education-date">2023 – Present</p><span class="education-level">Doctoral research</span><h3>University of <br>Pittsburgh</h3><p>Ph.D. in Electrical &amp; Computer Engineering</p><p class="education-detail">GPA 4.0<br>Advisor: Prof. Jingtong Hu<br>Co-advisor: Prof. Zhi-Hong Mao</p></article>
+        <article class="education-item"><p class="education-date">2021 – 2023</p><span class="education-level">Master’s degree</span><h3>Columbia <br>University</h3><p>M.S. in Electrical Engineering</p><p class="education-detail">GPA 3.96</p></article>
+        <article class="education-item"><p class="education-date">2017 – 2021</p><span class="education-level">Bachelor’s degree</span><h3>UESTC · <br>Glasgow College</h3><p>B.S. in Electronic Information Engineering</p><p class="education-detail">GPA 3.92 · Rank 1/257<br>First Class Honours<br>National Scholarship (Top 2%)</p></article>
+      </div>
+      <aside class="beyond" id="beyond" aria-labelledby="beyond-title"><span class="beyond-mark" aria-hidden="true">↗</span><div><p class="eyebrow">Beyond the lab</p><h3 id="beyond-title">Off the clock. Still iterating.</h3><p>I train and compete in club-level table tennis. I’m also building an AI coaching tool that combines computer vision and LLM-assisted feedback to turn training observations into actionable technique suggestions.</p></div><span class="beyond-label">Table tennis × AI</span></aside>
+    </div></section>
+    <section class="contact-band" id="contact" aria-labelledby="contact-title" tabindex="-1"><div class="container contact-inner"><div><p class="eyebrow">05 / Get in touch</p><h2 id="contact-title">Let’s build more<br><em>reliable ML.</em></h2><p>Interested in my work or a potential research or engineering opportunity? I’d be happy to connect.</p></div><div class="contact-actions"><a class="contact-email" href="mailto:yus190@pitt.edu">yus190@pitt.edu <span aria-hidden="true">↗</span></a><a class="button button-light" href="assets/Resume_Yukai_Song_Clinical_EEG.pdf" download>Download résumé <span aria-hidden="true">↓</span></a><div class="social-links"><a href="https://www.linkedin.com/in/yukai-song-711222208/" target="_blank" rel="noopener noreferrer">LinkedIn <span aria-hidden="true">↗</span></a><a href="https://github.com/Kevin11Kaikai" target="_blank" rel="noopener noreferrer">GitHub <span aria-hidden="true">↗</span></a></div></div></div></section>
   </main>
   <footer class="site-footer"><div class="container footer-inner"><p>© <span id="year">2026</span> Yukai Song</p><p>Research. Engineering. Reliability.</p><a href="#about">Back to top <span aria-hidden="true">↑</span></a></div></footer>
 </body>
