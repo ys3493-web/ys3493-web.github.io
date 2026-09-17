@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://ys3493-web.github.io/sitemap.xml
