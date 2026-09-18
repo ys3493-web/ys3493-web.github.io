@@ -80,7 +80,8 @@ function setFilter(area) {
   if (!projectList || !filterButtons.some((button) => button.dataset.filter === area)) return;
   let visibleCount = 0;
   for (const project of projects) {
-    project.hidden = area !== "all" && project.dataset.area !== area;
+    const areas = (project.dataset.area || "").split(/\s+/);
+    project.hidden = area !== "all" && !areas.includes(area);
     if (!project.hidden) visibleCount += 1;
   }
   for (const button of filterButtons) {
@@ -88,7 +89,8 @@ function setFilter(area) {
   }
   projectList.dataset.filtered = String(area !== "all");
   if (projectCount) {
-    projectCount.textContent = area === "all" ? "Showing all " + visibleCount + " projects" : "Showing " + visibleCount + " project";
+    const noun = visibleCount === 1 ? "project" : "projects";
+    projectCount.textContent = (area === "all" ? "Showing all " : "Showing ") + visibleCount + " " + noun;
   }
   scheduleLocation();
 }
